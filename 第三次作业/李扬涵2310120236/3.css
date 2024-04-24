@@ -1,0 +1,326 @@
+/*页头*/
+.head_img img{
+    width: 100%;
+    height: 200px;
+    position: relative; 
+    border: none;
+    
+}
+
+.search_box{
+    background-color: #80B4DC;
+    width: 400px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    color: aliceblue;
+}
+.search{
+    position: absolute;
+    top: 17px;
+    right: 70px;
+}
+
+/* 基本样式 */
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px; 
+    display: block; 
+}
+
+/* 导航容器样式 */
+.nav {
+    background-color: #084466;
+    text-align: center;
+}
+
+.dropdown {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+}
+
+.dropdown > li {
+    position: relative;
+}
+
+/* 隐藏下拉菜单内容并使其具备样式 */
+.dropdown .submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* 在主菜单项正下方 */
+    left: 0;
+    min-width: 150px; /* 或更多，根据需要 */
+    z-index: 1000; /* 确保下拉菜单在其他内容之上 */
+    list-style-type: none;
+    padding: 0;
+    background-color: #084466; /* 根据你的配色方案更改 */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* 在鼠标悬停时显示下拉菜单 */
+.dropdown .submenu:hover > ul {
+    display: block;
+}
+
+/* 下拉菜单中的项也应该是块级元素 */
+.dropdown .submenu ul li {
+    float: none;
+}
+
+.dropdown .submenu ul a {
+    padding: 10px;
+    display: block; /* 重置为块级元素 */
+    text-align: left;
+}
+
+/* 额外的样式和悬停效果 */
+.dropdown a:hover,
+.dropdown .submenu ul a:hover {
+    background-color: blue; /* 按需调整hover背景色 */
+}
+
+
+/*主体内容*/
+.section{
+    position: relative;
+    background-color: #d7e8f4;
+    height: 1050px;
+    width: 100%;
+}
+
+.headnew {
+    position: relative;
+    left: 10%;
+    display: inline-block; 
+    margin-top: 3px;
+    width: 80%;
+
+}
+
+.headnew a {
+    text-decoration: none; 
+    color: inherit; 
+    display: block;
+    position: relative; 
+    width: 100%; 
+}
+
+.headnew img {
+    width: 100%;
+    height: 80px; 
+}
+
+.headnew span {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    padding: 5px; 
+    white-space: nowrap; 
+    font-size: 35px;
+    line-height: 80px; 
+    text-align: center;
+    color: white;
+}
+
+.contest{
+    background-color: white;
+    height: 777.95px;
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+
+.lun{
+    background-color: aqua;
+    position: relative;
+    width: 340px;
+    height: 250px;
+    top: 10px;
+    left: 20px;
+    margin-bottom: 0%;
+}
+
+.lun img{
+    width: 340px;
+    height: 250px;
+    position: absolute;
+}
+
+.study{
+    background-color: aquamarine;
+    position: relative;
+    width: 500px;
+    height: 270px;
+    bottom: 237px;
+    left: 400px;
+}
+
+.report{
+    background-color: aquamarine;
+    position: relative;
+    width: 390px;
+    height: 270px;
+    left: 930px;
+    bottom: 505px;
+}
+
+
+
+.news{
+    background-color: aquamarine;
+    position: relative;
+    width: 400px;
+    height: 230px;
+    bottom: 480px;
+    left: 20px;
+}
+
+.ac{
+    background-color: aquamarine;
+    height: 230px;
+    width: 400px;
+    left: 440px;
+    bottom: 710px;
+    position: relative;
+}
+
+.ren{
+    background-color: aquamarine;
+    height: 230px;
+    width: 400px;
+    bottom: 937px;
+    left: 870px;
+    position: relative;
+}
+
+.ecode1{
+    width: 140px;
+    height: 160px;
+    position: relative;
+    bottom: 900px;
+    left: 25px;
+    margin-bottom: 0px;
+    background-color: #F0F0F0;
+}
+
+.ecode1 img{
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.ecodeword{
+    position: absolute;
+    text-align: center;
+    bottom: 5px;
+}
+
+.ecode2{
+    background-color: #F0F0F0;
+    width: 140px;
+    height: 160px;
+    position: relative;
+    left: 1170px;
+    top: 70%;
+}
+
+.ecode2 img{
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.links{
+    position: relative;
+    background-color: #F0F0F0;
+    width: 890px;
+    height: 30px;
+    left: 200px;
+    bottom: 1050px;
+}
+
+.link_box{
+    background-color: #084466;
+    height: 30px;
+    width: 100px;
+}
+
+.links a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.pc{
+    border: 0.5px dashed red;
+    position: relative;
+    width: 900px;
+    height: 100px;
+    border-radius: 25px;
+    left: 195px;
+    bottom: 1030px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap: 10px;
+}
+
+.pc img{
+    margin: 0 10px;
+    width: 140px;
+    height: 60px; 
+}
+
+.title1 {
+    background-color: #F0F0F0;
+    width: 100%;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.cr {
+    font-size: 20px;
+    background-color: #084466;
+    color: white;
+    text-decoration: none;
+    padding: 0 15px; 
+}
+
+.more {
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute; 
+    right: 0; 
+}
+
+/*页脚*/
+.foot1{
+    background-color: #084466;
+    position: relative;
+    width: 90%;
+    height: 30px;
+    left: 5%;
+    bottom: 10px;
+    margin-top: 30px;
+}
+
+.foot2{
+    color: black;
+    position: relative;
+    text-align: center;
+}
+
+
