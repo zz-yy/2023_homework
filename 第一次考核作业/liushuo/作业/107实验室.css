@@ -1,0 +1,347 @@
+/*消除不同浏览器默认样式之间的差异，为后续样式定义提供一个统一的基础。*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    width: 90vw;
+    height: 70vh;
+}
+
+
+.thehead {
+    position: absolute;
+    top: 30px;
+    left: 30%;
+    transform: translateX(-50%);
+    z-index: 1;
+    /* 确保 .thehead 在表单上方显示 */
+}
+
+body {
+    background-color: #2FA37E;
+    margin-bottom: 10%;
+}
+
+nav {
+    background-color: #2F2F2F;
+    padding-right: 20%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 280px;
+    margin-top: 10px;
+    /* 使导航栏占据整个页面宽度 */
+    /* 导航栏背景色 */
+    border-top: 1px solid #ccc;
+    /* 顶部边框线 */
+    padding: 20px;
+    /* 适当的填充 */
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+    /* 可选的阴影效果 */
+}
+
+/*thehead*/
+#logo-head {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    z-index: 1;
+    /* 设置层级，使logo在最上层 */
+
+}
+
+
+#bg_reg_wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    /* 设置层级，使背景在底层 */
+}
+
+/*theform*/
+.form {
+    width: 800px;
+    height: 500px;
+    margin: 200px 0px 100px 35%;
+    border: 1px dotted#99CFA2 thin;
+    border-radius: 5px;
+    background-color: #F0F8FF;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*分类*/
+/*左上*/
+#zhuce {
+    text-align: right;
+}
+
+#zhuce a {
+    color: #99CFA2;
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+}
+
+.left-link {
+    text-align: left;
+    color: #99CFA2;
+    text-decoration: none;
+}
+
+.right-link {
+    text-align: right;
+    color: #99CFA2;
+    text-decoration: none;
+
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 25px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 10px 50px;
+    margin: 12px;
+    border: none;
+    border-radius: 3px;
+    background-color: #1BBD9D;
+    color: #fff;
+    cursor: pointer;
+}
+
+.lefton {
+    border-right: #99CFA2 dotted thin;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 70px;
+    padding-bottom: 100px;
+}
+
+/*左下*/
+.leftdown {
+    border-right: #99CFA2 dotted thin;
+    border-top: #99CFA2 dotted thin;
+    padding-bottom: 40px;
+    padding-top: 15px;
+    padding-left: 0%;
+    text-align: center;
+    background-color: #F8F8F8;
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+    justify-items: center;
+}
+
+.leftdown p {
+    color: #666666;
+}
+
+.leftdown-down {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 60px;
+    justify-items: center;
+}
+
+.leftdown-downleft {
+    columns: 1;
+}
+
+.leftdown-on {
+    grid-row: 1;
+}
+
+.leftdown-down {
+    grid-row: 2;
+}
+
+/*右上*/
+.righton {
+    padding-top: 50px;
+    padding-left: 10px;
+    line-height: 1.8;
+}
+
+.righton dd {
+    color: #99CFA2;
+
+}
+
+/*右下*/
+.rightdown {
+    padding-top: 10px;
+    padding-left: 10px;
+    line-height: 1.8;
+}
+
+.rightdown dd {
+    color: #99CFA2;
+}
+
+
+
+
+
+/*the nav*/
+.logo-container {
+    padding: 0%;
+    position: relative;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+#logo {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/*分列*/
+.nav1 {
+    display: grid;
+    grid-template-columns: 600px 1000px auto;
+    gap: 100px;
+}
+
+.logo-container {
+    grid-column: 1;
+}
+
+.table {
+    grid-column: 2;
+}
+
+.zixun {
+    grid-column: 3;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 600px 200px;
+    grid-template-rows: 350px 150px;
+}
+
+.lefton {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.leftdown {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.righton {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.rightdown {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.zixun {
+    margin-top: 40px;
+    background-color: #00C2F0;
+    width: 40px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.zixun p {
+    letter-spacing: 5px;
+    color: white;
+}
+
+.zixun img {
+    padding-top: 10px;
+    width: 30px;
+    height: 25px;
+}
+
+.zixun p img {
+    margin-bottom: 10px;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table table {
+    width: 100%;
+    color: #666666;
+}
+
+.table th,
+.table td {
+    border: none;
+    /* 移除边框 */
+    padding: 8px;
+    text-align: left;
+}
+
+.table tbody td img {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.table thead tr:first-child td {
+    color: white;
+}
+
+.table tbody tr:nth-child(n+2) td {
+    border-top: none;
+}
+
+.table thead td {
+    border-bottom: 2px solid black;
+    border-bottom-width: 1px;
+}
+
+
+.bottom {
+    border-top: #99CFA2 dotted thin;
+    color: #666666;
+}
