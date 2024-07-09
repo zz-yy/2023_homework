@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.head {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+
+
+.head .background {
+    width: auto;
+    height: 200px;
+
+}
+
+.background img {
+    height: 200px;
+}
+
+.head .extra {
+    position: absolute;
+    right: 90px;
+    top: 0;
+
+}
+
+.ms td {
+    padding: 10px 30px;
+    line-height: 30px;
+}
+
+.ms td a {
+    color: white;
+    line-height: 10px;
+}
+
+.extra .ms {
+    float: left;
+}
+
+
+.search .text {
+    position: relative;
+    width: 200px;
+    margin: 10px;
+}
+
+.search .text input[type="text"] {
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.search .button {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.search .button button {
+    width: 60px;
+    height: 30px;
+    border: none;
+    background-color: #6e9fd2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.search .button button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+.extra .search {
+    float: right;
+}
+
+.search .text {
+    float: left;
+}
+
+.search .button {
+    float: right;
+}
+
+
+.nav {
+    height: 60px;
+    background-color: #878F9C;
+    position: relative;
+    z-index: 9999;
+}
+
+.nav .main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nav dl {
+    display: flex;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav .main dd a {
+    float: none;
+    flex: 0 1 auto;
+    line-height: 20px;
+    padding: 0 20px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.nav::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.head-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    background-image: url('../images/headNew.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.head-new .pa {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px
+}
+
+.body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.head-new .pa p {
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
