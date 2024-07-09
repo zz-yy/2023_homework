@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1712408906963') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-qq:before {
+  content: "\e66a";
+}
+
+.icon-weixin:before {
+  content: "\e633";
+}
+
+.icon-zhanghu:before {
+  content: "\e62b";
+}
+
+.icon-weixin1:before {
+  content: "\e64b";
+}
+
+.icon-qq-copy:before {
+  content: "\e658";
+}
+
+.icon-QQ:before {
+  content: "\e73e";
+}
+
+.icon-GitHub:before {
+  content: "\ea0a";
+}
+
+.icon-Oracle:before {
+  content: "\ea23";
+}
+
+.icon-QQ1:before {
+  content: "\e882";
+}
+
+.icon-zaixianlianxi:before {
+  content: "\e6a7";
+}
+
+.icon-QQkongjian:before {
+  content: "\e666";
+}
+
+.icon-QQ2:before {
+  content: "\e667";
+}
+
+.icon-search:before {
+  content: "\e611";
+}
+
+.icon-qq1:before {
+  content: "\e636";
+}
+
+.icon-weixin2:before {
+  content: "\e782";
+}
+
+.icon-weixin3:before {
+  content: "\e607";
+}
+
+.icon-QQ3:before {
+  content: "\ea94";
+}
+
