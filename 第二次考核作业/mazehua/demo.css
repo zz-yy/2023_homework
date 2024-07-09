@@ -1,0 +1,613 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    overflow-y: scroll;
+}
+
+/* 导航栏上方黄色标语搜索框部分 */
+.header {
+    background-color: rgb(245, 170, 2);
+    width: 100%;
+    display: flex;
+    height: 100px;
+    position: relative;
+}
+
+.header .search_left {
+    margin-left: 140px;
+}
+
+.header .search_right {
+    display: flex;
+    width: 300px;
+    height: 28px;
+    line-height: 50;
+    margin: 40px 1000px;
+    /* border: 2px solid #01acb7;
+    border-radius: 23px; */
+
+}
+
+.search_right input {
+    padding: 0px 15px;
+    background: rgb(245, 170, 2);
+    box-sizing: border-box;
+    outline: none;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border: 2px solid #01acb7
+}
+
+.search_right button {
+    width: 50px;
+    height: 28px;
+    box-sizing: border-box;
+    border: none;
+
+    background: #01acb7;
+    font-size: 10px;
+    color: rgb(250, 248, 248);
+    border: 2px solid #01acb7;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.search_right input:hover {
+    background: rgb(250, 249, 248);
+}
+
+/* 蓝色导航栏部分 */
+
+.blue-nav {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(77, 167, 178);
+}
+
+.blue-center {
+    width: 1300px;
+    height: 40px;
+    line-height: 40px;
+    /* float: left; */
+    margin: 0 auto;
+}
+
+.blue-center .blue-li {
+    float: left;
+    width: 140px;
+    list-style: none;
+    text-align: center;
+position: relative;
+}
+
+.blue-center li:hover {
+    background-color: rgb(231, 109, 20);
+
+}
+
+.blue-center li a {
+    color: white;
+    text-decoration: none;
+}
+
+.blue-li .blue-center-list {
+    background-color: rgb(77, 167, 178);
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+
+}
+
+.blue-center-list ul {
+    margin: 0px 0px;
+    width: 100%;
+}
+
+.blue-center li:hover>.blue-center-list {
+    display: block;
+}
+
+.blue-li .blue-center-list li {
+    text-align: center;
+}
+
+/* banner部分轮播图 */
+.carousel {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.carousel .container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    left: 0;
+    display: flex;
+    transform: all 1s;
+}
+
+.carousel .container img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+
+}
+
+.carousel .shift .btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    cursor: pointer;
+    /* user-select: none; */
+}
+
+.carousel .shift .left {
+    left: 20px;
+}
+
+.carousel .shift .right {
+    right: 20px;
+}
+
+.carousel .bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: max-content;
+    display: flex;
+    gap: 10px;
+}
+
+.carousel .bottom .indicator {
+    height: 10px;
+    width: 50px;
+    background-color: rgb(238, 141, 22);
+    cursor: pointer;
+}
+
+/* 网页中间内容 */
+.main {
+    width: 1200px;
+    height: 450px;
+    margin: 20px 500px;
+    background: #fdfdfd;
+}
+
+/* 中间上半部分内容 */
+.main .main-top {
+    width: 1200px;
+    height: 320px;
+    display: flex;
+}
+
+/* 左边古诗部分 */
+.left_box {
+    width: 550px;
+    height: 300px;
+    background: rgb(252, 251, 251);
+
+}
+
+.title {
+
+    width: 550px;
+    height: 55px;
+
+
+}
+
+.one {
+
+    float: left;
+    width: 275px;
+    height: 45px;
+    color: rgb(248, 248, 248);
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+    background: #ec6b0e;
+    border-radius: 15px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.twe {
+
+    float: left;
+    width: 275px;
+    height: 45px;
+    color: rgb(248, 248, 248);
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+    background: #f5aa02;
+    border-radius: 0px 15px 0px 0px;
+    cursor: pointer;
+}
+
+.context_box {
+    overflow: hidden;
+    position: relative;
+}
+
+.poetry_list {
+    display: flex;
+    width: 1200px;
+    height: 270px;
+    transition: 0.05s ease;
+    position: relative;
+}
+
+.context {
+
+    width: 550px;
+    height: 270px;
+}
+
+.poetry {
+    float: left;
+    width: 300px;
+    height: 250px;
+    margin-left: 10px;
+
+}
+
+.date {
+    width: 173px;
+    height: 250px;
+    float: left;
+    margin-left: 65px;
+    text-align: center;
+}
+
+.context li {
+    height: 35px;
+    line-height: 35px;
+    margin: 5px;
+    font-size: 13px;
+}
+
+.context li:hover {
+    color: rgb(225, 43, 43);
+}
+
+/* 中间会议轮播图 */
+.center_box {
+    width: 335px;
+    height: 284px;
+    margin: 0px -93px;
+}
+
+.top {
+    width: 335px;
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+    left: 100px;
+    border: 5px solid #f6a500;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.top_imglist {
+    display: flex;
+    width: 2200px;
+    height: 284px;
+
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.top_imglist img {
+
+    width: 335px;
+    height: 230px;
+
+
+}
+
+.top_imglist_bottom {
+    display: flex;
+    width: 2200px;
+    height: 30px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 205px;
+}
+
+
+
+.top_imglist_bottom div {
+    width: 540px;
+
+    height: 30px;
+    line-height: 30px;
+    color: aliceblue;
+    font-size: 15px;
+    margin: 0px 40px;
+}
+
+.stri1 {
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom-color: #ec6503;
+    position: absolute;
+    left: 10%;
+    margin: 1px 570px;
+    display: none;
+}
+
+.stri2 {
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom-color: #ec6503;
+    position: absolute;
+    left: 10%;
+    margin: 1px 650px;
+    display: none;
+}
+
+.stri3 {
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom-color: #ec6503;
+    position: absolute;
+    left: 10%;
+    margin: 1px 730px;
+    display: none;
+}
+
+.stri4 {
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom-color: #ec6503;
+    position: absolute;
+    left: 10%;
+    margin: 1px 810px;
+    display: none;
+}
+
+.bottom {
+    width: 370;
+    height: 60px;
+    position: relative;
+    margin: -9px 2px;
+    left: 100px;
+    cursor: pointer;
+}
+
+.bottom_imglist {
+    display: flex;
+    width: 345px;
+    height: 60px;
+    margin: 20px 5px;
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.bottom_imglist div {
+    width: 70px;
+    height: 45px;
+    margin: 0px 2px;
+    border: 5px solid #c9dde6;
+
+}
+
+
+
+.bottom_imglist div:hover {
+
+    border: 5px solid #f6a500;
+}
+
+.bottom_imglist img {
+
+    width: 70px;
+    height: 45px;
+
+
+}
+
+/* 中间右边古诗部分 */
+.right_box {
+    width: 250px;
+    height: 305px;
+    margin: 0px 208px;
+    border-left: 3px solid #f6a500;
+    border-right: 3px solid #f6a500;
+
+}
+
+.right_box .the_one {
+    width: 230px;
+    height: 60px;
+    background: #ec6b0e;
+    color: rgb(250, 249, 249);
+    font-size: 18px;
+    line-height: 60px;
+    padding: 0px 10px
+}
+
+.the_two {
+    width: 250px;
+    height: 135px;
+}
+
+.the_two ul li {
+    margin: 15px;
+    font-size: 15px;
+}
+
+.the_three {
+    width: 250px;
+    height: 80px;
+    background: #f5aa02;
+
+
+}
+
+.the_three ul li {
+    color: rgb(250, 249, 249);
+    font-size: 15px;
+    margin: 10px;
+}
+
+/* 中间下半部分内容 */
+.main .main_bottom {
+    width: 1200px;
+    height: 150px;
+    display: flex;
+    position: relative;
+
+}
+
+/* 左边图片轮播图 */
+.wrap {
+    width: 700px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px 30px 0px;
+    border: 3px solid #f6a500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.img-list {
+    display: flex;
+    width: 2500px;
+    height: 120px;
+    margin: 0px 5px;
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.img-list img {
+    margin: 0px 10px;
+    width: 153px;
+    height: 120px;
+
+
+}
+
+.eleft {
+    width: 20px;
+    height: 35px;
+    background: #f3f4f7;
+    text-align: center;
+    line-height: 35px;
+    color: #999999;
+    font-size: 25px;
+    position: absolute;
+    left: 10px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.eright {
+    width: 20px;
+    height: 35px;
+    background: #f3f4f7;
+    text-align: center;
+    line-height: 35px;
+    color: #999999;
+    font-size: 25px;
+    position: absolute;
+    left: 670px;
+    top: 40px;
+    cursor: pointer;
+}
+
+/* 右边有狗的图片的部分 */
+ .dog {
+     width: 400px;
+     height: 140px;
+
+ }
+
+.dog div {
+     width: 400px;
+     height: 68px;
+    display: flex;
+    position: relative;
+
+ }
+
+.dog div .img {
+     width: 100%;
+     height:100%;
+     border: 3px solid white;
+     
+ }
+
+ .big-dog {
+     position: fixed;
+
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background-color: rgba(0, 0, 0, 0.6);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     /* 小手 */
+     cursor: pointer;
+ }
+
+ .big-dog .big {
+     max-width: 90%;
+     max-height: 90%;
+     object-fit: contain;
+ }
+
+
+
+
+/* 网页底部内容 */
+.fighting {
+    background: #f5aa02;
+    display: flex;
+    width: 100%;
+    height: 150px;
+
+
+}
+
+.fighting .img {
+    width: 316px;
+    height: 150px;
+    margin: 0px 300px;
+}
+
+.fighting ul {
+    width: 316px;
+    height: 123px;
+    margin-top: 5px;
+}
+
+.fighting ul li {
+    margin: 20px;
+}

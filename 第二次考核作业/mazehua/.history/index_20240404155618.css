@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+
+    background: rgb(5, 189, 146);
+}
+.logbj{
+    background-image: url(/images/bg_reg_wave.png);
+    background-repeat: no-repeat;
+}
