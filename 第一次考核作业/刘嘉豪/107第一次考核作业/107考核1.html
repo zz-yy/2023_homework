@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #2FA37E;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        p {
+            color: #1BBC9C;
+            font-size: smaller;
+            font-weight: 100;
+            margin-top: 10px;
+            margin-left: 10px;
+
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 120%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            font-size: smaller;
+            font-weight: 300;
+            text-decoration: none;
+            color: #2FA37E;
+
+        }
+
+        .upscreen {
+            position: absolute;
+            left: 19%;
+            top: 5%;
+            width: 50%;
+            height: 20%;
+            background-image: url(bg_reg_wave.png);
+
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .screen {
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            width: 30%;
+            height: 30%;
+            background-image: url(logo.png);
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            width: 40%;
+            height: 40%;
+            background-color: #f0f8ff;
+        }
+
+        .box1 {
+            width: 65%;
+            height: 60%;
+            top: 5px;
+        }
+
+        .box2 {
+            width: 35%;
+            height: 70%;
+            position: absolute;
+            left: 65%;
+            top: 0;
+            border-width: 0.1px;
+            border-style: solid;
+            border-color: hsla(0, 68%, 93%, 0.795);
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .box2 h4 {
+            margin-top: 45px;
+        }
+
+        h4 {
+            font-size: medium;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .box3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 65%;
+            height: 35%;
+            top: 70%;
+            left: none;
+            background-color: #F8F9F9;
+            border-width: 0.1px;
+            border-style: solid;
+            border-color: hsla(0, 68%, 93%, 0.795);
+        }
+
+        .box3 p {
+
+            color: hsl(0, 3%, 52%);
+        }
+
+        .box>img { 
+            text-align: center;
+        }
+
+        .box3-1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box3>p {
+            text-align: center;
+            color: hsl(0, 3%, 52%);
+            margin-bottom: 10px;
+        }
+
+        .box4 {
+            position: absolute;
+            width: 35%;
+            height: 35%;
+            left: 65%;
+            top: 70%;
+            background-color: #F8F9F9;
+            border-width: 0.1px;
+            border-style: solid;
+            border-color: hsla(0, 68%, 93%, 0.795);
+            border-top: none;
+
+        }
+
+        h3 {
+            font-size: large;
+            font-weight: 500;
+            margin-top: 5%;
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+
+        p {
+            text-decoration: none;
+        }
+
+        .item {
+
+            height: 33px;
+            margin-bottom: 1px;
+        }
+
+        .item0 {
+
+            height: 33px;
+            margin-bottom: 1px;
+        }
+
+        .item input {
+            display: block;
+            float: left;
+            margin-bottom: 20px;
+            border: #ddd;
+            height: 100%;
+            width: 80%;
+            margin-left: 10%;
+
+        }
+
+        .item0 input {
+            display: block;
+            float: left;
+            margin-bottom: 20px;
+            border: #ddd;
+            height: 100%;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .item1 {
+            display: flex;
+            flex-direction: row;
+            margin-top: 15px;
+            border: #ddd;
+            height: 100%;
+            width: 80%;
+            margin-left: 10%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .item1.forget {
+            color: #1BBC9C;
+            font-size: 13px;
+            position: absolute;
+        }
+
+        .forget a {
+            margin-left: 80px;
+        }
+
+        .phone a {
+            margin-right: 60px;
+        }
+
+        .item1.phone {
+            margin-right: 30px;
+            color: #1BBC9C;
+            font-size: 13px;
+            margin-right: 80px;
+            position: absolute;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+
+        .btn input {
+            text-align: center;
+            margin-left: 10%;
+            background-color: #1BBC9C;
+            color: #f0f8ff;
+            border: none;
+            height: 44px;
+            width: 80%;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .register {
+            margin-top: 10px;
+            height: 35px;
+            float: right;
+            color: #575757;
+            margin-right: 10%;
+        }
+
+        span {
+            font-size: smaller;
+            font-weight: 300;
+        }
+
+        .downscreen {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 27%;
+            background-color: #2F2F2F;
+            z-index: -1;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .part1 {
+            width: 35%;
+            height: 100%;
+            top: 0;
+            background-color: #2F2F2F;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .part11 {
+            transform: scale(1.5);
+            width: 35%;
+            height: 27%;
+            background-image: url(logo.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 20%;
+            left: 32%;
+
+        }
+
+        .part11-1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 48%;
+            left: 35%;
+        }
+
+        .part2 {
+
+            width: 30%;
+            height: 100%;
+            background-color: #2F2F2F;
+            position: relative;
+
+        }
+
+        .table-row {
+            display: flex;
+            top: 20%;
+            position: absolute;
+        }
+
+        h2 {
+            font-size: large;
+            font-weight: 400;
+            color: #f0f8ff;
+
+        }
+
+        .table-wrapper {
+            margin-right: 20px;
+        }
+
+        table {
+            margin-left: -5px;
+            margin-top: 10px;
+            font-size: smaller;
+            border-collapse: collapse;
+            width: 180px;
+        }
+
+        td {
+            font-weight: 100px;
+            color: #575757;
+        }
+
+        th,
+        td {
+            padding: 5px 5px;
+
+        }
+
+        .part3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 35%;
+            height: 100%;
+            background-color: #2F2F2F;
+        }
+
+        .language {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+        }
+
+        .part3-1 {
+            top: 60%;
+            left: 10%;
+            position: absolute;
+        }
+
+        .query {
+            width: 50px;
+            height: 150px;
+            background-color: #00C2F0;
+            margin-right: 60px;
+            right: 100px;
+            bottom: 80px;
+            position: absolute;
+
+        }
+
+        .query p {
+            vertical-align: auto;
+            align-items: center;
+            writing-mode: vertical-lr;
+            color: #f0f8ff;
+            margin-left: -3px;
+        }
+
+        .end {
+            border-top: 0.2px solid  hsl(0, 3%, 52%);
+            position: absolute;
+            margin-top: 20px;
+            bottom: 10px;
+            left: 8.5%;
+            right: 0;
+            text-align: left;
+            color: #333;
+        }
+        .end p{
+            color: #575757;
+            margin-bottom: -10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="up">
+        <div class="upscreen">
+            <div class="screen"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box1">
+            <h3>107LAB登录</h3>
+            <form action="">
+                <div class="register">
+                    <span>还没有注册吗？</span><a href="#">去注册</a>
+                </div>
+                <div class="item">
+                    <input type="text" placeholder="请输入您的邮箱地址或手机号">
+                </div>
+                <div class="item0">
+                    <input type="password" placeholder="请输入密码">
+                </div>
+                <div class="btn">
+                    <input type=" submit" value="登录">
+                </div>
+                <div class="item1">
+                    <div class="phone">
+                        <a href="#" class="phone1">使用手机验证码登录</a>
+                    </div>
+                    <div class="forget">
+                        <a href="#" class="forget1">忘记密码</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="box2">
+            <h4>107实验室帮助</h4>
+            <p>来自习，好的学习环境</p>
+            <p>来旅游，好的娱乐氛围</p>
+            <p>去挑战，无尽的乐趣</p>
+            <p>去攀登，超越自我</p>
+            <p>去坚持，汗水浇灌希望</p>
+            <p>明德新民，止于至善</p>
+            <p>上善若水，水润利万物</p>
+        </div>
+        <div class="box3">
+            <p>———或使用第三方登录———</p>
+            <div class="box3-1">
+                <div class="3-1-1">
+                    <img src="qq.png" alt="1" style="margin-right: 30px;">
+                    <p>QQ</p>
+                </div>
+                <div class="3-1-2">
+                    <img src="github.png" alt="" style="margin-left: 12px">
+                    <p>GitHub</p>
+                </div>
+            </div>
+        </div>
+        <div class="box4">
+            <h4>实验室相关</h4>
+            <p>高配的电脑</p>
+            <p>专业的技术</p>
+        </div>
+    </div>
+    <div class="downscreen">
+        <div class="part1">
+            <div class="part11"> </div>
+            <div class="part11-1">
+                <div class="part11-1-1">
+                    <img src="tracup.png" alt="" style="margin-right: 10px;">
+                </div>
+                <div class="part11-1-2">
+                    <img src="frontjs.png" alt="">
+                </div>
+            </div>
+            <div class="part12"></div>
+        </div>
+        <div class="part2">
+            <div class="table-row">
+                <div class="table-wrapper">
+                    <h2>关于我们</h2>
+                    <table>
+                        <tr>
+                            <td>单人单桌</td>
+                            <td>一起聚餐</td>
+                        </tr>
+                        <tr>
+                            <td>配备电脑</td>
+                            <td>一起唱歌</td>
+                        </tr>
+                        <tr>
+                            <td>两台大空调</td>
+                            <td>一起旅行</td>
+                        </tr>
+                        <tr>
+                            <td>冬暖夏凉</td>
+                            <td>互帮互助</td>
+                        </tr>
+                        <tr>
+                            <td>还不快来</td>
+                            <td>来就对了</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table-wrapper">
+                    <h2>服务技能</h2>
+                    <table>
+                        <tr>
+                            <td>学院官网</td>
+                            <td>主学技能</td>
+                        </tr>
+                        <tr>
+                            <td>专题网站</td>
+                            <td>HTML</td>
+                        </tr>
+                        <tr>
+                            <td>公司官网</td>
+                            <td>CSS</td>
+                        </tr>
+                        <tr>
+                            <td>信息管理系统</td>
+                            <td>JavaScript</td>
+                        </tr>
+                        <tr>
+                            <td>有偿服务</td>
+                            <td>PHP</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            </table>
+        </div>
+        <div class="part3">
+            <div class="language">
+                <h2>选择语言</h2>
+                <table>
+                    <tr>
+                        <td><img src="language_chinese.png" alt=""> 中文</td>
+                    </tr>
+                    <tr>
+                        <td><img src="language_english.png" alt=""> 英文</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="part3-1">
+                <img src="weixin.png" alt="">
+                <img src="zhihu.png" alt="">
+            </div>
+        </div>
+        <div class="query">
+            <p><img src="zixun.png" alt="">咨询·建议</p>
+        </div>
+        <div class="end">
+            <p>此网站仅供学习使用</p>
+            <p>&copy; 2023 河南大学计算机与信息工程学院107网站工作室 All Right Reserved</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

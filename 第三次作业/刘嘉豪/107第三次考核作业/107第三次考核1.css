@@ -1,0 +1,67 @@
+html,
+body {
+    width: 1900px;
+    height: 1460px;
+    background-color: #D6E8F4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.part1 {
+    width: 1900px;
+    height: 250px;
+    background: url(F:/html/源码/107第三次考核/top-bj2.gif);
+    position: relative;
+}
+.search {
+    position: relative;
+    width: 500px;
+    height: 50px;
+    left: 1200px;
+}
+.search table{
+    width: 600px;
+    height: 50px;
+}
+.search td{
+    cursor: pointer;
+    padding-left:5px;
+    padding-right: 5px;
+    color: hsl(200, 100%, 99%);
+    width: 80px;
+    height: 50px;
+}
+.search-box {
+    position: relative;
+    width: 290px;
+    height: 50px;
+}
+.search-txt {
+    height: 30px;
+    top:10px;
+    border-radius: 5%;
+    padding-left: 10px;
+    position: relative;
+    outline: none;
+    border: none;
+    background-color: #AFD3EB;
+    color: hsl(240, 0%, 54%);
+}
+.search-txt:hover {
+    background-color: #f4f2f2;
+}
+.btn {
+    width: 50px;
+    height: 30px;
+    color: #fcfcfa;
+    border: none;
+    position: relative;
+    top:11px;
+   background-color:#4C88AD;
+}

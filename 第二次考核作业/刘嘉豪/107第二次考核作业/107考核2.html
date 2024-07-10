@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <script src="menu.js"></script>
+    <style>
+        html,
+        body {
+            height: 150%;
+            width: 1600px;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .part1 {
+            overflow: visible;
+            width: 100%;
+            background-color: #F5AA02;
+            display: flex;
+            flex-direction: column;
+            position:relative;
+        }
+
+        .logo {
+            margin-left: 200px;
+            width: 500px;
+            height: 100px;
+            background-image: url(F:/html/源码/107第二次考核/logo.png);
+            background-size: cover;
+        }
+
+        .search-box {
+            position: absolute;
+            top: 30%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            background: #01ACB7;
+            height: 40px;
+            border-radius: 40px;
+            padding: 2px;
+        }
+
+        .search-txt {
+            border: none;
+            padding-left: 10px;
+            height: 39px;
+            border-radius: 50px 0 0 50px;
+            background: #F5AA02;
+            outline: none;
+            color: #575757;
+            font-size: 15px;
+        }
+
+        .search-btn {
+            text-decoration: none;
+            color: hwb(60 98% 1%);
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-txt:hover {
+            background-color: #f4f2f2;
+        }
+
+        .slide {
+            overflow: visible;
+            width: 60%;
+            height: 42px;
+            background-color: #01ACB7;
+            margin-top: auto;
+            padding-left: 20%;
+            padding-right: 20%;
+            display: flex;
+            flex-direction: row;
+            color: #fff;
+            line-height: 42px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .slide a {
+            text-decoration: none;
+            height: 80px;
+            color: #fff;
+            background-color: #01ACB7;
+
+        }
+
+        span {
+            display: flex;
+            text-align: center;
+            width: 10%;
+            cursor: pointer;
+            padding-left: 3.9%;
+            padding-right: 1.1%;
+            height: 42px;
+            background-color: #01ACB7;
+        }
+
+        span:hover{
+            background-color: #EC6B0E;
+        }
+        .first {
+            text-align: center;
+            line-height: 42px;
+            height: 84px;
+            width: 12%;
+            margin-top: 41px;
+            margin-left: -14.2%;
+            padding-left: 1.5%;
+            padding-right: 1.5%;
+            background-color: #01ACB7;
+            display: flex;
+            justify-content: center;
+            display: none;
+            z-index: 2;
+        }
+
+        .second {
+            text-align: center;
+            /* 文字水平居中 */
+            line-height: 42px;
+            /* 文字垂直居中 */
+            height: 84px;
+            width: 12%;
+            margin-top: 41px;
+            margin-left: -14.2%;
+            padding-left: 1.5%;
+            padding-right: 1.5%;
+            background-color: #01ACB7;
+            display: flex;
+            justify-content: center;
+            display: none;
+            z-index: 2;
+        }
+
+        .third {
+            text-align: center;
+            /* 文字水平居中 */
+            line-height: 42px;
+            /* 文字垂直居中 */
+            height: 168px;
+            width: 12%;
+            margin-top: 41px;
+            margin-left: -14.2%;
+            padding-left: 1.5%;
+            padding-right: 1.5%;
+            background-color: #01ACB7;
+            display: flex;
+            justify-content: center;
+            display: none;
+            z-index: 2;
+        }
+
+        .fourth {
+            text-align: center;
+            /* 文字水平居中 */
+            line-height: 42px;
+            /* 文字垂直居中 */
+            height: 126px;
+            width: 12%;
+            margin-top: 41px;
+            margin-left: -14.2%;
+            padding-left: 1.5%;
+            padding-right: 1.5%;
+            background-color: #01ACB7;
+            display: flex;
+            justify-content: center;
+            display: none;
+            z-index: 2;
+        }
+
+        .fifth {
+            text-align: center;
+            /* 文字水平居中 */
+            line-height: 42px;
+            height: 168px;
+            width: 12%;
+            margin-top: 41px;
+            margin-left: -14.2%;
+            padding-left: 1.5%;
+            padding-right: 1.5%;
+            background-color: #01ACB7;
+            display: flex;
+            justify-content: center;
+            display: none;
+            z-index: 2;
+        }
+
+        .part2 {
+            z-index: 1;
+            flex-grow: 11;
+            display: flex;
+            width: 100%;
+            background-color: #FFFFFF;
+            height: 1000px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrap {
+            height: 400px;
+            width: 1600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrap ul {
+            width: 6400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .wrap ul li {
+            float: left;
+            width: 1600px;
+        }
+
+        .wrap ol {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 500px;
+            height: 50px;
+            bottom: 0px;
+            right: 500px;
+            border-radius: 30px 30px 0 0;
+            background-color: hsl(24, 6%, 83%);
+            padding-left: 150px;
+            opacity: 0.7;
+        }
+
+        .wrap ol li {
+            float: left;
+            width: 60px;
+            height: 17px;
+            line-height: 16px;
+            text-align: center;
+            background: #81807C;
+            color: #EC6B0E;
+            margin-right: 40px;
+            cursor: pointer;
+            border-radius: 10px 10px 10px 10px;
+            color: #81807C;
+            opacity: 0.9;
+        }
+
+        .wrap ol li.current {
+            background: #EC6B0E;
+            color: #81807C;
+        }
+
+        .part2-2 {
+            width: 1200px;
+            height: 320px;
+            display: flex;
+        }
+
+        .part2-2-1 {
+            margin-top: 20px;
+            width: 500px;
+            height: 280px;
+        }
+
+        .tabContainer {
+            display: flex;
+        }
+
+        .tabTitle {
+            width: 520px;
+
+        }
+
+        .tabTitle ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            background-color: orange;
+            padding-left: 0px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .tabTitle li {
+            border-radius: 10px 10px 0 0;
+            width: 260px;
+            cursor: pointer;
+            padding-top: 10px;
+            height: 35px;
+            color: white;
+            list-style-type: none;
+        }
+
+        .tabTitle li.active {
+            background-color: darkorange;
+        }
+
+        .tabContent {
+            width: 500px;
+            height: 230px;
+            padding-left: 20px;
+        }
+
+        .tabContent .hide {
+            display: none;
+        }
+
+        .tabContent li {
+            margin-bottom: 16px;
+            list-style-type: none;
+        }
+
+        .tabContent.show {
+            margin-bottom: 10px;
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .tabContent li:hover {
+            color: rgb(149, 11, 11);
+        }
+
+        .tabContent li:before {
+            content: none;
+        }
+
+        .tabContent li:after {
+            content: "2019年3月18日";
+            float: right;
+            padding-right: 20px;
+            color: black;
+
+        }
+
+        .tabContent li:hover:after {
+            color: red;
+        }
+
+
+        .tabContent:last-child {
+            margin-left: -2px;
+            box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .tabContent:first-child {
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .part2-2-2 {
+            width: 400px;
+            height: 300px;
+        }
+
+        .zoom {
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        .zoomMiddle {
+            border: 3px solid #F5AA02;
+            width: 320px;
+            height: 200px;
+            margin-bottom: 3px;
+            position: relative;
+            margin-left: 20px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .zoomMiddle img {
+
+            width: 320px;
+            height: 200px;
+        }
+
+        .zoomSmall {
+            margin-left: 22px;
+            width: 320px;
+            text-align: center;
+
+        }
+
+        .zoomSmall span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .zoomSmall span.disable {
+            cursor: not-allowed;
+            background-color: #ccc;
+        }
+
+        .wrapSmallImg {
+            margin-top: 10px;
+
+            width: 320px;
+            text-align: center;
+
+        }
+
+        .wrapSmallImg ul {
+            display: inline-block;
+            padding: 0;
+        }
+
+        .wrapSmallImg ul li {
+            display: inline-block;
+            width: 67px;
+            height: 58px;
+            border: 2px solid #ccc;
+            margin: 0 2px;
+            cursor: pointer;
+        }
+
+        .wrapSmallImg ul li.current {
+            border: 3px solid #EC6B0E;
+        }
+
+        .wrapSmallImg ul li img {
+            width: 67px;
+            height: 58px;
+        }
+
+        .imageDescription {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 310px;
+            background: rgba(8, 8, 8, 0.7);
+            /* 半透明背景 */
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            opacity: 0.5;
+        }
+
+        .part2-2-3 {
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        .part2-3 {
+
+            height: 250px;
+            width: 1200px;
+            display: flex;
+
+        }
+
+        a {
+
+            text-decoration: none;
+            color: rgb(15, 15, 15);
+        }
+
+        h3 {
+            line-height: 42px;
+            cursor: pointer;
+            padding-bottom: 20px;
+            background-color: #F5AA02;
+            height: 20px;
+            width: 280px;
+            padding-left: 20px;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .part2-2-3 ul {
+            border: 2px solid #F5AA02;
+            height: 160px;
+            width: 296px;
+            background-color: #fff;
+
+        }
+
+        .part2-2-3 ul li {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .part-2-3-1 {
+            width: 600px;
+            height: 250px;
+        }
+
+        .wrap1 {
+            height: 350px;
+            width: 840px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrap1 ul {
+            width: 1260px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .wrap1 ul li {
+            float: left;
+            width: 210px;
+        }
+
+        .wrap1 ol {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 60px;
+            height: 10px;
+            bottom: 0px;
+            right: 200px;
+            border-radius: 5px 5px 0 0;
+       
+            padding-left: 20px;
+            padding-right: 20px;
+            opacity: 0.5;
+        }
+
+        .wrap1 ol li {
+            float: left;
+            width: 12px;
+            height: 4px;
+            line-height: 16px;
+            text-align: center;
+         
+            margin-right: 3px;
+            cursor: pointer;
+            border-radius: 5px 5px 5px 5px;
+         
+            opacity: 0.5;
+        }
+
+       
+        .part-2-3-2 {
+            margin-left: 200px;
+            width: 400px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            left: 50px;
+            margin-left: 300px;
+
+        }
+
+        .box1 {
+            width: 400px;
+            height: 125px;
+            display: flex;
+        }
+
+        .box1-1 {
+            width: 150px;
+            height: 125px;
+
+        }
+
+        .box1-2 {
+
+            width: 150px;
+            height: 125px;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 125px;
+            display: flex;
+        }
+
+        .box2-1 {
+
+            width: 150px;
+            height: 125px;
+        }
+
+        .box2-2 {
+
+            width: 150px;
+            height: 125px;
+        }
+
+        .part3 {
+            display: flex;
+            flex-grow: 0.5;
+            width: 100%;
+            background-color: #F5AA02;
+            flex-direction: column;
+            display: block;
+            place-content: center;
+        }
+
+        .part3-1 {
+            margin-left: 250px;
+            float: left;
+            width: 400px;
+            height: 150px;
+            overflow: hidden;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .part3-1 img {
+            height: 150px;
+        }
+
+        .part3-2 {
+            margin-top: 40px;
+            margin-left: 55%;
+            width: 300px;
+            background-size: cover;
+        }
+
+        .part3-2 p {
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <div class="navigation1">
+            <div class="logo"></div>
+
+            <div class="search-box">
+                <input class="search-txt" type="text" name="" placeholder="站内搜索">
+                <a class="search-btn" href="#">
+                    <p>搜索</p>
+                </a>
+            </div>
+
+        </div>
+        <div class="slide">
+            <span>首页</span>
+            <ul>
+                <li></li>
+            </ul>
+            <span>中心简介</span>
+            <ul class="first">
+                <li><a href="#">部门设置</a></li>
+                <li><a href="#">中心任务</a></li>
+            </ul>
+            <span>中心动态</span>
+            <ul class="second">
+                <li><a href="#">中心动态 </a></li>
+                <li><a href="#">最新通知</a></li>
+
+            </ul>
+            <span>教师培训</span>
+            <ul class="third">
+                <li><a href="#">基础课程培训 </a></li>
+                <li><a href="#">专业课程培训</a></li>
+                <li><a href="#">教学技能培训 </a></li>
+                <li><a href="#">教学工作坊</a></li>
+            </ul>
+            <span>教学研究</span>
+            <ul class="fourth">
+                <li><a href="#">科研项目 </a></li>
+                <li><a href="#">教学成果</a></li>
+                <li><a href="#">教学研讨会</a></li>
+            </ul>
+            <span>资源中心</span>
+            <ul class="fifth">
+                <li><a href="">校内视频资源</a></li>
+                <li><a href="">校外视频资源</a></li>
+                <li><a href="">慕课资源</a></li>
+                <li><a href="">其他资源</a></li>
+            </ul>
+            <span>咨询服务</span>
+        </div>
+    </div>
+    <div class="part2">
+        <div class="wrap">
+            <ul>
+                <li><img src="F:\html\源码\107第二次考核\banner1.jpg" width="1600px" height="400px" alt=""></li>
+                <li><img src="F:\html\源码\107第二次考核\banner2.jpg" width="1600px" height="400px" alt=""></li>
+                <li><img src="F:\html\源码\107第二次考核\banner3.jpg" width="1600px" height="400px" alt=""></li>
+                <li><img src="F:\html\源码\107第二次考核\banner4.jpg" width="1600px" height="400px" alt=""></li>
+            </ul>
+            <ol>
+                <li class="current"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+        <div class="part2-2">
+            <div class="part2-2-1">
+                <div class="tabTitle">
+                    <ul>
+                        <li class="current">水调歌头</li>
+                        <li>满江红·写怀</li>
+                    </ul>
+                </div>
+
+
+                <div class="tabContent">
+                    <div class="show">
+                        <ul>
+                            <li>明月几时有，把酒问青天。</li>
+                            <li>不知天上宫阙，今夕是何年。</li>
+                            <li>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</li>
+                            <li>起舞弄清影，何似在人间？</li>
+                            <li>转朱阁，低绮户，照无眠。</li>
+                            <li>不应有恨，何事长向别时圆？</li>
+                        </ul>
+                    </div>
+                    <div class="hide">
+                        <li>怒发冲冠，凭阑处、潇潇雨歇。</li>
+                        <li>抬望眼，仰天长啸，壮怀激烈。</li>
+                        <li>三十功名尘与土，八千里路云和月。</li>
+                        <li>莫等闲，白了少年头，空悲切。</li>
+                        <li>靖康耻，犹未雪；臣子恨，何时灭？</li>
+                        <li>驾长车，踏破贺兰山缺。</li>
+                    </div>
+
+                </div>
+            </div>
+            <div class="part2-2-2">
+                <div class="zoom">
+                    <div class="zoomMiddle">
+                        <img src="img1.jpg" alt="">
+                        <p class="imageDescription">第一次全体会议</p>
+                    </div>
+                    <div class="zoomSmall">
+                        <div class="wrapSmallImg">
+                            <ul>
+                                <li class="current"><img src="img1.jpg" alt="第一次全体会议"></li>
+                                <li><img src="img2.jpg" alt="第二次全体会议"></li>
+                                <li><img src="img3.jpg" alt="第三次全体会议"></li>
+                                <li><img src="img4.jpg" alt="第四次全体会议"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part2-2-3">
+                <h3>春晓</h3>
+                <ul>
+                    <li><a href="#">春眠不觉晓</a></li>
+                    <li><a href="#">处处闻啼鸟</a></li>
+                    <li><a href="#">夜来风雨声</a></li>
+                    <li><a href="#">花落知多少</a></li>
+                </ul>
+
+                <h3>夜雨寄北</h3>
+                <ul style="display:none">
+                    <li><a href="#">君问归期未有期</a></li>
+                    <li><a href="#">巴山夜雨涨秋池</a></li>
+                    <li><a href="#">何当共剪西窗烛</a></li>
+                    <li><a href="#">却话巴山夜雨时</a></li>
+                </ul>
+
+                <h3>清明</h3>
+                <ul style="display:none">
+                    <li><a href="#">清明时节雨纷纷</a></li>
+                    <li><a href="#">路上行人欲断魂</a></li>
+                    <li><a href="#">借问酒家何处有</a></li>
+                    <li><a href="#">牧童遥指杏花村</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="part2-3">
+            <div class="part-2-3-1">
+                <div class="wrap1">
+                    <ul>
+                        <li><img src="1.jpg" width="200px" height="200px" alt=""></li>
+                        <li><img src="2.jpg" width="200px" height="200px" alt=""></li>
+                        <li><img src="3.jpg" width="200px" height="200px" alt=""></li>
+                        <li><img src="4.jpg" width="200px" height="200px" alt=""></li>
+                        <li><img src="5.jpg" width="200px" height="200px" alt=""></li>
+                        <li><img src="6.jpg" width="200px" height="200px" alt=""></li>
+                    </ul>
+                    <ol>
+                        <li class="current1"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="part-2-3-2">
+                <div class="box1">
+                    <div class="box1-1">
+                        <img src="dog 1.jpg" alt="" width="145px" height="120px">
+                    </div>
+                    <div class="box1-2">
+                        <img src="dog 2.jpg" alt="" width="145px" height="120px">
+                    </div>
+
+                </div>
+                <div class="box2">
+                    <div class="box2-1">
+                        <img src="dog 3.jpg" alt="" width="145px" height="120px">
+                    </div>
+                    <div class="box2-2">
+                        <img src="dog 4.jpg" alt="" width="145px" height="120px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="part3">
+        <div class="part3-1">
+            <img src="F:\html\源码\107第二次考核\up.png" alt="">
+        </div>
+        <div class="part3-2">
+            <p>联系电话：137976707017</p>
+            <p>地址：河南省开封市河南大学金明校区</p>
+            <p>技术支持：河南大学107网站工作室</p>
+        </div>
+    </div>
+</body>
+
+</html>
