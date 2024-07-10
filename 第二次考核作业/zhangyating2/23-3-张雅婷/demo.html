@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>107实验室</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+    <!-- 导航栏上方黄色标语搜索框部分 -->
+
+    <div class="header">
+        <div class="search_left">
+            <img style="width: 500px;height: 100px;" src="images/logo.png">
+        </div>
+        <div class="search_right">
+            <input type="text" placeholder="站内搜索">
+            <button>搜索</button>
+        </div>
+    </div>
+
+    <!--蓝色导航栏部分 start-->
+    <div class="blue-nav">
+        <div class="blue-center">
+            <ul>
+                <li class="blue-li">
+                    <a href="#">首页</a>
+                </li>
+                <li class="blue-li">
+                    <a href="#">中心简介</a>
+                    <div class="blue-center-list">
+                        <ul>
+                            <li><a href="#">部门设置</a></li>
+                            <li><a href="#">中心任务</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="blue-li">
+                    <a href="#">中心动态</a>
+                    <div class="blue-center-list">
+                        <ul>
+                            <li><a href="#">中心动态</a></li>
+                            <li><a href="#">最新通知</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="blue-li">
+                    <a href="#">教师培训</a>
+                    <div class="blue-center-list">
+                        <ul>
+                            <li><a href="#">基础课程培训</a></li>
+                            <li><a href="#">专业课程培训</a></li>
+                            <li><a href="#">教学技能培训</a></li>
+                            <li><a href="#">教学工作坊</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="blue-li">
+                    <a href="#">教学研究</a>
+                    <div class="blue-center-list">
+                        <ul>
+                            <li><a href="#">科研项目</a></li>
+                            <li><a href="#">教学成果</a></li>
+                            <li><a href="#">教学研讨会</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="blue-li">
+                    <a href="#">资源中心</a>
+                    <div class="blue-center-list">
+                        <ul>
+                            <li><a href="#">校内视频资源</a></li>
+                            <li><a href="#">校外视频资源</a></li>
+                            <li><a href="#">慕课资源</a></li>
+                            <li><a href="#">其他资源</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="blue-li">
+                    <a href="#">咨询服务</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- banner部分轮播图 -->
+
+    <div class="carousel">
+        <!-- 图片列表 -->
+        <div class="container">
+            <img src="images/banner1.jpg" alt="" />
+            <img src="images/banner2.jpg" alt="" />
+            <img src="images/banner3.jpg" alt="" />
+            <img src="images/banner4.jpg" alt="" />
+        </div>
+        <div class="shift">
+            <div class="btn left" onclick="leftShift()">
+                <a href="javascript:;" class="leftShift"> <img src="images/prev.png" alt=""></a>
+            </div>
+            <div class="btn right" onclick="rightShift()">
+                <a href="javascript:;" class="rightShift"><img src="images/next.png" alt=""></a>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="indicator" onclick="setIndex(0)"></div>
+            <div class="indicator" onclick="setIndex(1)"></div>
+            <div class="indicator" onclick="setIndex(2)"></div>
+            <div class="indicator" onclick="setIndex(3)"></div>
+        </div>
+        <!-- banner部分轮播图js  -->
+        <script>
+            // 获取图片数目
+            let imageCount = document.querySelectorAll(
+                ".carousel .container img"
+            ).length
+
+            function refresh() {
+                if (index < 0) {
+                    index = 3
+                } else if (index > 3) {
+                    index = 0
+                }
+                let carousel = document.querySelector('.carousel')
+                let width = getComputedStyle(carousel).width
+                width = Number(width.slice(0, -2))
+                console.log(width)
+                carousel.querySelector(".container").style.left =
+                    index * width * -1 + "px"
+            }
+            function createAuto() {
+                return setInterval(() => {
+                    index++
+                    refresh()
+                }, 3000)
+            }
+            // 自动滚动
+            let autoTimer = createAuto()
+
+            let refreshWrapper = (func) => {
+                return function (...args) {
+                    let result = func(...args)
+                    refresh()
+                    clearInterval(autoTimer)
+                    autoTimer = createAuto()
+                    return result
+                }
+            }
+            let leftShift = refreshWrapper(() => {
+                index--
+            })
+            let rightShift = refreshWrapper(() => {
+                index++
+            })
+            let setIndex = refreshWrapper((idx) => {
+                index = idx
+            })
+            refresh()
+
+        </script>
+
+
+
+
+    </div>
+    <!-- 网页中间内容 -->
+    <div class="main">
+        <!-- 中间上半部分内容 -->
+        <div class="main-top">
+            <!-- 左边古诗部分 -->
+            <div class="left_box">
+                <div class="title">
+                    <div class="one">水调歌头</div>
+                    <div class="twe">满江红·写怀</div>
+
+                </div>
+                <div class="context_box">
+                    <div class="poetry_list">
+                        <div class="context">
+                            <ul class="poetry">
+                                <li>明月几时有？把酒问青天。</li>
+                                <li>不知天上宫阙，今夕是何年。</li>
+                                <li>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</li>
+                                <li>明月几时有？把酒问青天。</li>
+                                <li>转朱阁，低绮户，照无眠。</li>
+                                <li>不应有恨，何事长向别时圆？</li>
+                            </ul>
+                            <ul class="date">
+                                <li>2019年3月12日</li>
+                                <li>2019年3月12日</li>
+                                <li>2019年3月12日</li>
+                                <li>2019年3月12日</li>
+                                <li>2019年3月12日</li>
+                                <li>2019年3月12日</li>
+                            </ul>
+                        </div>
+                        <div class="context">
+                            <ul class="poetry">
+                                <li>怒发冲冠，凭栏处、潇潇雨歇。</li>
+                                <li>抬望眼、仰天长啸，壮怀激烈。</li>
+                                <li>三十功名尘与土，八千里路云和月。</li>
+                                <li>莫等闲、白了少年头，空悲切。</li>
+                                <li>靖康耻，犹未雪。臣子恨，何时灭</li>
+                                <li>驾长车，踏破贺兰山缺。</li>
+                            </ul>
+                            <ul class="date">
+                                <li>2019年3月12日</li>
+                                <li>2019年3月12日</li>
+                                <li>2019年3月12日</li>
+                                <li>2019年3月12日</li>
+                                <li>2019年3月12日</li>
+                                <li>2019年3月12日</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 中间左边古诗部分动态效果实现 -->
+            <script>
+                //获取古诗题目按钮
+                let pLeft = document.querySelector(".one");
+                let pRight = document.querySelector(".twe");
+                let opoetry_listtext = document.querySelector(".poetry_list");
+
+                //实现左按钮
+                function one() {
+                    pRight.style.background = "#f5aa02";
+                    pLeft.style.background = "#ec6b0e";
+                    opoetry_listtext.style.left = 0 + "px";
+
+
+                }
+                function twe() {
+                    pRight.style.background = "#ec6b0e";
+                    pLeft.style.background = "#f5aa02";
+                    opoetry_listtext.style.left = -550 + "px";
+
+                }
+                pLeft.addEventListener("click", one);
+                //实现右按钮
+                pRight.addEventListener("click", twe);
+            </script>
+            <!-- 中间中心会议轮播图 -->
+            <div class="center_box">
+                <div class="top">
+                    <!-- 图片列表 -->
+                    <div class="top_imglist">
+                        <img src="./images/img1.jpg">
+                        <img src="./images/img2.jpg">
+                        <img src="./images/img3.jpg">
+                        <img src="./images/img4.jpg">
+
+                    </div>
+                    <div class="top_imglist_bottom">
+                        <div>第一次全体会议</div>
+                        <div>第二次全体会议</div>
+                        <div>第三次全体会议</div>
+                        <div>第四次全体会议</div>
+                    </div>
+                </div>
+                <!-- <div class="stri1"></div>
+                <div class="stri2"></div>
+                <div class="stri3"></div>
+                <div class="stri4"></div> -->
+                <div class="bottom">
+
+                    <div class="bottom_imglist">
+
+                        <div><img src="./images/img1.jpg" data-n="0"> </div>
+                        <div><img src="./images/img2.jpg" data-n="1"></div>
+                        <div><img src="./images/img3.jpg" data-n="2"></div>
+                        <div><img src="./images/img4.jpg" data-n="3"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 中间中心会议轮播图js动态效果 -->
+            <script>
+                let index1 = 0;
+                let otop_imglist = document.querySelector(".top_imglist");
+                let top_imglist_bottom = document.querySelector(".top_imglist_bottom");
+                //点击小图片切换上方大图片
+                const oSamll = document.querySelector(".bottom_imglist");
+                oSamll.addEventListener("click", (e) => {
+
+                    if (e.target.nodeName.toLowerCase() === "img") {
+                        //当前元素的data-n对应的值，和index一一对应
+
+                        const n = Number(e.target.getAttribute("data-n"));
+                        index1 = n;
+                        otop_imglist.style.left = index1 * -335 + "px";
+                        top_imglist_bottom.style.left = index1 * -540 + "px";
+                    }
+
+                })
+            </script>
+            <!-- 中间右边古诗部分 -->
+            <div class="right_box">
+                <div class="the_one">春晓</div>
+                <div class="the_two">
+                    <ul>
+                        <li>春眠不觉晓</li>
+                        <li>处处闻啼鸟</li>
+                        <li>夜来风雨声</li>
+                        <li>花落知多少</li>
+                    </ul>
+                </div>
+                <div class="the_three">
+                    <ul>
+                        <li>夜雨寄北</li>
+                        <li>清明</li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- 中间下半部分内容 -->
+        <div class="main_bottom">
+            <!-- 左边图片轮播图 -->
+            <div class="wrap">
+                <!-- 图片列表 -->
+                <div class="img-list">
+                    <img src="./images/1.jpg">
+                    <img src="./images/2.jpg">
+                    <img src="./images/3.jpg">
+                    <img src="./images/4.jpg">
+                    <img src="./images/5.jpg">
+                    <img src="./images/6.jpg">
+                    <img src="./images/1.jpg">
+                    <img src="./images/2.jpg">
+                    <img src="./images/3.jpg">
+                    <img src="./images/4.jpg">
+                    <img src="./images/5.jpg">
+                    <img src="./images/6.jpg">
+                </div>
+                <!-- 小箭头-->
+                <div class="eleft"> < </div>
+                <div class="eright"> > </div>
+
+            </div>
+
+                <!-- js实现左边轮播图 -->
+
+                <!-- 实现点击箭头切换图片-->
+               <script>
+                //获取小箭头按钮和图片列表
+                let eLeft = document.querySelector(".eleft");
+                
+                let eRight = document.querySelector(".eright");
+                
+                let oImglist = document.querySelector(".img-list");
+                // 以图片为索引代表第几张
+                let index3 = 0;
+                //实现左按钮
+                function leftBtn() {
+                    index3++;
+                    oImglist.style.left = index3 * -173 + "px";
+
+                    if (index3 === 8) {
+                        oImglist.style.left = 0 + "px";
+                        index3 = 0;
+                    }
+                }
+
+                eLeft.addEventListener("click", leftBtn);
+                //实现右按钮
+                eRight.addEventListener("click", () => {
+                    
+                    if (index3 === 0) {
+                        oImglist.style.left = 0 + "px";
+                    }
+                    else {
+                        index3--;
+                        oImglist.style.left = index3 * -173 + "px";
+                    }
+
+
+                });
+                //自动轮播
+                let autoplay = setInterval(leftBtn, 2000);
+                let oWrap = document.querySelector(".wrap");
+                //移入停止轮播
+                oWrap.addEventListener("mouseenter", () => {
+                    clearInterval(autoplay);
+                });
+                //移出继续轮播
+                oWrap.addEventListener("mouseleave", () => {
+                    //设表先关
+                    clearInterval(autoplay);
+                    autoplay = setInterval(leftBtn, 2000);
+
+                });
+            </script>
+
+                <!-- 右边有狗的图片的部分-->
+            <div class="dog">
+                    <div>
+                        <img class="img" src="images/dog 1.jpg" alt="" />
+                        <img class="img" src="images/dog 2.jpg" alt="" />
+
+                    </div>
+                    <div>
+                        <img class="img" src="images/dog 3.jpg" alt="" />
+                        <img class="img" src="images/dog 4.jpg" alt="" />
+                    </div>
+            </div>
+
+                <!-- 
+                <div class="big-dog">
+                                <img class="img" src="images/dog 1.jpg" alt="" />
+                                <img class="img" src="images/dog 2.jpg" alt="" />
+                                <img class="img" src="images/dog 3.jpg" alt="" />
+                                <img class="img" src="images/dog 4.jpg" alt="" />
+                </div>
+
+                -->
+                <!-- 右边有狗的图片的js部分-->
+                <script>
+                    for (let img of document.querySelectorAll(".img")) {
+                        img.addEventListener("click", () => {
+                            let container = document.createElement("div")
+                            container.classList.add("big-dog")
+                            container.onclick = function () {
+                                container.remove()
+                            }
+                            let innerImg = document.createElement("img")
+                            innerImg.classList.add("big")
+                            innerImg.src = img.src
+                            container.append(innerImg)
+                            document.body.append(container)
+                        })
+
+
+                    }
+                </script>
+
+            </div>
+        </div>
+
+        <!-- 网页底部内容 -->
+        <div class="fighting">
+            <div class="img"><img src="./images/up.png" height="150" width="300"></div>
+            <ul>
+                <li>联系电话：137976707017</li>
+                <li>地址：河南省开封市河南大学金明校区</li>
+                <li>技术支持：河南大学107网站工作室</li>
+            </ul>
+        </div>
+</body>
+
+</html>

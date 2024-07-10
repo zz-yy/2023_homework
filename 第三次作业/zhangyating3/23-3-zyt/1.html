@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二次考核作业</title>
+</head>
+<style>
+    .top {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 90px;
+        background-color: #64baf0;
+    }
+
+    .leftttt {
+        position: absolute;
+        top: 10px;
+        width: 70px;
+        height: 22px;
+        left: 800px;
+        border-radius: 20px;
+        color: white;
+
+    }
+
+    .lefttttt {
+        position: absolute;
+        top: 10px;
+        width: 70px;
+        height: 22px;
+        left: 900px;
+        border-radius: 20px;
+        color: white;
+
+    }
+
+    .search {
+        position: absolute;
+        top: 10px;
+        width: 200px;
+        height: 22px;
+        left: 1000px;
+        border-radius: 20px;
+        border: 2px solid #64baf0;
+    }
+
+    .input {
+        float: left;
+        width: 200px;
+        height: 22px;
+        border: none;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        background-color: #f6f6f6;
+        left: 1000px;
+    }
+
+    .input1 {
+        float: left;
+        position: absolute;
+        left: 150px;
+        width: 50px;
+        height: 22px;
+        color: white;
+        background-color: #4b9abc;
+        border: none;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        cursor: pointer;
+
+    }
+
+
+
+    .container {
+        background-color: #033353;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 90px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav1 {
+        list-style: none;
+        display: flex;
+        width: 100%;
+        color: white;
+    }
+
+    .nav1>li {
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        flex: 1;
+    }
+
+    .nav2>li {
+        height: 0;
+        background-color: #06578c;
+        overflow: hidden;
+
+        transition: 1s;
+
+    }
+
+    .nav1>li:hover .nav2>li {
+
+        height: 50px;
+    }
+
+    .nav1>li:hover {
+        background-color: #033353;
+        height: 50px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+    }
+
+    .top22 {
+        position: absolute;
+        top: 140px;
+        width: 100%;
+        height: 60px;
+        left: 100px;
+        right: 30px;
+        background-color: transparent;
+    }
+
+    .leftt {
+        position: absolute;
+        top: 150px;
+        width: 1200px;
+        height: 30px;
+        left: 420px;
+        border-radius: 20px;
+        color: white;
+        font-size: xx-large;
+    }
+
+
+
+    .width {
+        width: 400px;
+        left: 50px;
+    }
+
+    .box {
+        left: 100px;
+        top: 200px;
+        width: 400px;
+        height: 300px;
+
+        position: relative;
+        overflow: hidden;
+        background-repeat: no-repeat;
+
+
+
+        .next {
+            opacity: 0;
+            display: inline-block;
+            cursor: pointer;
+            width: 40px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            color: #d2d0d0;
+            z-index: 33;
+            text-align: center;
+            font-size: 40px;
+            transform: translateY(-25px);
+        }
+
+        .prev {
+            left: 0;
+
+        }
+
+
+        .next {
+            right: 0;
+
+        }
+
+
+        .images {
+            position: absolute;
+            top: 0;
+            left: 50px;
+            width: 1400px;
+
+            li {
+                list-style: none;
+                float: left;
+
+                img {
+                    width: 400px;
+                    height: 400px;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+
+        .dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            height: 13px;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+            display: flex;
+
+            li {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border-color: white;
+                background-color: rgb(0, 0, 0, 0.2);
+                margin: 2px 5px;
+                cursor: pointer;
+            }
+
+            .active {
+                background-color: rgb(247, 243, 243);
+            }
+        }
+    }
+
+    .box:hover .prev,
+    .box:hover .next {
+        opacity: 1;
+    }
+
+    .box .prev:hover,
+    .box .next:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .box1 {
+        left: 500px;
+        top: 200px;
+        width: 550px;
+        height: 300px;
+        position: absolute;
+        background-color: white;
+
+    }
+
+    .box1a {
+        left: 100px;
+        top: 10px;
+        width: 100px;
+        height: 30px;
+        color: white;
+        position: absolute;
+        background-color: #064063;
+    }
+
+    .box1b {
+        left: 0px;
+        top: 40px;
+        width: 550px;
+        height: 30px;
+        color: rgb(11, 11, 11);
+        position: absolute;
+        background-color: white;
+    }
+
+    .box2 {
+        left: 980px;
+        top: 200px;
+        width: 400px;
+        height: 300px;
+        position: absolute;
+        background-color: white;
+    }
+
+    .box2a {
+        left: 100px;
+        top: 10px;
+        width: 100px;
+        height: 30px;
+        color: white;
+        position: absolute;
+        background-color: #064063;
+    }
+
+    .box2b {
+        left: 0px;
+        top: 40px;
+        width: 400px;
+        height: 30px;
+        color: rgb(11, 11, 11);
+        position: absolute;
+        background-color: transparent;
+    }
+
+    .box3 {
+        left: 100px;
+        top: 500px;
+        width: 550px;
+        height: 300px;
+        position: absolute;
+        background-color: white;
+
+    }
+
+    .box3a {
+        left: 100px;
+        top: 10px;
+        width: 100px;
+        height: 30px;
+        color: rgb(199, 20, 20);
+        position: absolute;
+        background-color: transparent;
+    }
+
+    .box3b {
+        left: 0px;
+        top: 40px;
+        width: 550px;
+        height: 30px;
+        color: rgb(11, 11, 11);
+        position: absolute;
+        background-color: transparent;
+    }
+
+    .ccc {
+        height: 5px;
+        width: 400px;
+        background-color: red;
+    }
+
+    .box4 {
+        left: 500px;
+        top: 500px;
+        width: 550px;
+        height: 300px;
+        position: absolute;
+        background-color: white;
+
+    }
+
+    .box4a {
+        left: 100px;
+        top: 10px;
+        width: 100px;
+        height: 30px;
+        color: rgb(199, 20, 20);
+        position: absolute;
+        background-color: transparent;
+    }
+
+    .box4b {
+        left: 0px;
+        top: 40px;
+        width: 550px;
+        height: 30px;
+        color: rgb(11, 11, 11);
+        position: absolute;
+        background-color: transparent;
+    }
+
+    .cccc {
+        height: 5px;
+        width: 550px;
+        background-color: rgb(231, 189, 73);
+    }
+
+    .box5 {
+        left: 1000px;
+        top: 500px;
+        width: 400px;
+        height: 300px;
+        position: absolute;
+        background-color: white;
+
+    }
+
+    .box5a {
+        left: 100px;
+        top: 10px;
+        width: 100px;
+        height: 30px;
+        color: rgb(199, 20, 20);
+        position: absolute;
+        background-color: transparent;
+    }
+
+    .box5b {
+        left: 0px;
+        top: 40px;
+        width: 400px;
+        height: 30px;
+        color: rgb(11, 11, 11);
+        position: absolute;
+        background-color: transparent;
+    }
+
+    .ccccc {
+        height: 5px;
+        width: 400px;
+        background-color: rgb(193, 191, 185);
+    }
+
+    .box6 {
+        top: 800px;
+        left: 100px;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        background-color: white;
+    }
+
+    .box7 {
+        top: 800px;
+        left: 250px;
+        width: 700px;
+        height: 150px;
+        position: absolute;
+        background-color: white;
+    }
+
+    .box7a {
+        left: 0px;
+        top: 10px;
+        width: 100px;
+        height: 30px;
+        color: rgb(252, 252, 253);
+        position: absolute;
+        background-color: rgb(21, 49, 111);
+    }
+
+    .box7b {
+        left: 0px;
+        top: 40px;
+        width: 880px;
+        height: 100px;
+        color: rgb(11, 11, 11);
+        position: absolute;
+        background-color: white;
+        border-color: red;
+    }
+
+    .box7c {
+        left: 10px;
+        right: 10px;
+        top: 20px;
+        width: 880px;
+        height: 80px;
+        color: rgb(11, 11, 11);
+        position: absolute;
+        background-color: transparent;
+    }
+
+    .box7d {
+        top: 20px;
+        width: 180px;
+        height: 80px;
+    }
+
+    .box8 {
+        top: 800px;
+        left: 1150px;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        background-color: white;
+    }
+
+    .box9 {
+        top: 980px;
+        left: 150px;
+        width: 1100px;
+        height: 20px;
+        position: absolute;
+        background-color: rgb(21, 49, 111);
+    }
+
+    .box10 {
+        top: 1000px;
+        left: 25%;
+        width: 700px;
+        height: 50px;
+        position: absolute;
+        background-color: rgb(244, 247, 252);
+    }
+</style>
+
+
+
+
+<body>
+    <div class="top">
+        <img src="ppp1.gif" width="100%" height="90px">
+    </div>
+    <div class="leftttt">
+        <p>设为首页</p>
+    </div>
+    <div class="lefttttt">
+        <p>加入收藏</p>
+    </div>
+    <div class="search">
+        <input type="text" value="请输入关键字" class="input">
+        <input type="button" value="搜索" class="input1">
+    </div>
+    <div class="container">
+        <ul class="nav1">
+            <li>首页</li>
+            <li>部门介绍</li>
+            <li>党派团体</li>
+            <li>人大政协</li>
+            <li>建言献策</li>
+            <li>政策法规</li>
+            <li>民族宗教</li>
+            <li>下载专区</li>
+            <li>联系我们</li>
+
+        </ul>
+    </div>
+    <div class="bigbox">
+        <div class="top22">
+            <img src="pp1.gif" width="1200px" height="60px">
+        </div>
+        <div class="leftt">
+            <p>在灾难大考中坚定报国力行的使命担当</p>
+        </div>
+        <div class="box">
+            <a href="javascript:;" class="prev"> &lt;</a>
+            <a href="javascript:;" class="next"> &gt;</a>
+            <ul class="images" class="width">
+                <li><a href="#"><img src="l1.jpg" alt="轮播图图片"></a></li>
+                <li><a href="#"><img src="l2.jpg" alt="轮播图图片"></a></li>
+                <li><a href="#"><img src="l3.jpg" alt="轮播图图片"></a></li>
+            </ul>
+            <ul class="dots">
+            </ul>
+        </div>
+        <div class="box1">
+            <div class="box1a">理论学习</div>
+            <div class="box1b">
+                <table>
+                    <tr>
+                        <td weight="400px" height="36px"><a href="http://ww.11.com ">防控肺炎疫情给我们带来的启示</a>
+                        </td>
+                        <td weight="150px" height="36px">04月03日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px">学习贯彻·部长说河南：发挥统战优势，展现担当作为</td>
+                        <td weight="150px" height="36px">03月25日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px">王国生在党外人士座谈会上指出，发展优势凝聚发展正..</td>
+                        <td weight="150px" height="36px">03月18日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px">习近平在湖北省考察新冠肺炎疫情防控工作</td>
+                        <td weight="150px" height="36px">03月14日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px">习近平在决战决胜脱贫攻坚座谈会上强调坚决克服新..</td>
+                        <td weight="150px" height="36px">03月07日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px">奋战关键阶段，决胜收官之年</td>
+                        <td weight="150px" height="36px">02月27日</td>
+                    </tr>
+                    <tr>
+
+                </table>
+            </div>
+
+        </div>
+
+        <div class="box2">
+            <div class="box2a">通知公告</div>
+            <div class="box2b">
+                <table>
+                    <tr>
+                        <td weight="400px" height="36px">转发关于开展征文活动的通知</td>
+                        <td weight="150px" height="36px">04月17日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px">转发关于开展征文活动的通知</td>
+                        <td weight="150px" height="36px">03月25日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px">党委统战部近期值班安排</td>
+                        <td weight="150px" height="36px">03月18日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px">延迟开学期间统战部值班安排</td>
+                        <td weight="150px" height="36px">03月14日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px">党委统战部2020年寒假值班安排表</td>
+                        <td weight="150px" height="36px">03月07日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px">颁奖通知，河南大学统一战线庆祝</td>
+                        <td weight="150px" height="36px">02月27日</td>
+                    </tr>
+                    <tr>
+
+                </table>
+            </div>
+
+        </div>
+        <div class="box3">
+            <img src="ll1.jpg" left="0px">
+            <div class="box3a">
+                新闻速递
+            </div>
+            <div class="ccc">
+            </div>
+            <div class="box3b">
+                <table>
+                    <tr>
+                        <td weight="400px" height="36px"><a href="http://ww.22.com "><img src="j.png"
+                                    left="0px">在灾难大考中坚定报国历史的担当</a>
+                        <td weight="150px" height="36px">04月17日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><a href="http://ww.33.com "><img src="j.png"
+                                    left="0px">河南大学统一战线抗疫情系列报道</a>
+                        <td weight="150px" height="36px">03月25日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><a href="http://ww.44.com "><img src="j.png"
+                                    left="0px">我校两名党外知识分子或殊荣</a>
+                        <td weight="150px" height="36px">03月18日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><a href="http://ww.55.com "><img src="j.png"
+                                    left="0px">辛永芬，段亚广获得中国语言资源</a>
+                        <td weight="150px" height="36px">03月14日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><a href="http://ww.66.com "><img src="j.png"
+                                    left="0px">河南大学统一战线抗疫情系列报道</a>
+                        <td weight="150px" height="36px">03月07日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><a href="http://ww.77.com "><img src="j.png"
+                                    left="0px">河南大学统一战线抗疫情系列报道</a>
+                        <td weight="150px" height="36px">02月27日</td>
+                    </tr>
+                    <tr>
+
+                </table>
+            </div>
+
+        </div>
+        <div class="box4">
+            <img src="ll1.jpg" left="0px">
+            <div class="box4a">统战忆往</div>
+            <div class="cccc">
+            </div>
+            <div class="box4b">
+                <table>
+                    <tr>
+                        <td weight="400px" height="36px"><a href="http://ww.11.com "><img src="j.png"
+                                    left="0px">防控肺炎疫情给我们带来的启示</a>
+                        </td>
+                        <td weight="150px" height="36px">04月03日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">学习贯彻·部长说河南：发挥统战优势，展现担当作为</td>
+                        <td weight="150px" height="36px">03月25日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">王国生在党外人士座谈会上指出，发展优势凝聚发展正..</td>
+                        <td weight="150px" height="36px">03月18日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">习近平在湖北省考察新冠肺炎疫情防控工作</td>
+                        <td weight="150px" height="36px">03月14日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">习近平在决战决胜脱贫攻坚座谈会上强调坚决克服新..</td>
+                        <td weight="150px" height="36px">03月07日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">奋战关键阶段，决胜收官之年</td>
+                        <td weight="150px" height="36px">02月27日</td>
+                    </tr>
+                    <tr>
+
+                </table>
+            </div>
+
+        </div>
+        <div class="box5">
+            <img src="ll1.jpg" left="0px">
+            <div class="box5a">通知公告</div>
+            <div class="ccccc"></div>
+            <div class="box5b">
+                <table>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">转发关于开展征文活动的通知</td>
+                        <td weight="150px" height="36px">04月17日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">转发关于开展征文活动的通知</td>
+                        <td weight="150px" height="36px">03月25日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">党委统战部近期值班安排</td>
+                        <td weight="150px" height="36px">03月18日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">延迟开学期间统战部值班安排</td>
+                        <td weight="150px" height="36px">03月14日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">党委统战部2020年寒假值班安排表</td>
+                        <td weight="150px" height="36px">03月07日</td>
+                    </tr>
+                    <tr>
+                        <td weight="400px" height="36px"><img src="j.png" left="0px">颁奖通知，河南大学统一战线庆祝</td>
+                        <td weight="150px" height="36px">02月27日</td>
+                    </tr>
+                    <tr>
+                </table>
+            </div>
+        </div>
+        <div class="box6">
+            <img src="2.jpg" width="145px" height="145px">
+            <div>河大统战公众号</div>
+        </div>
+        <div class="box7">
+            <div class="box7a">相关链接</div>
+            <div class="box7b" style="border: 1px solid red;">
+                <table class="box7c">
+                    <tr>
+                        <td><img src="1.gif" width="160px" height="60px"></td>
+
+                        <td><img src="2.gif" width="160px" height="60px"></td>
+
+                        <td><img src="3.gif" width="160px" height="60px"></td>
+
+                        <td><img src="4.jpg" width="160px" height="60px"></td>
+
+                        <td><img src="5.gif" width="160px" height="60px"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="box8">
+            <img src="22.jpg" width="145px" height="145px">
+            <div>统战新语公众号</div>
+        </div>
+    </div>
+    <div class="box9"></div>
+    <div class="box10">
+        <p>Copyright 2019 河南大学党委统战部 技术支持河南大学 107网站工作室 管理后台</p>
+        <p>地址:中国 河南 开封.明伦街/金明大道 邮编:475001/475004 电话:0371265666428</p>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            var slideIndex = 0;
+            var circle = 0;
+            var dots = document.querySelector('.dots');
+            var images = document.querySelector('.images');
+            var box = document.querySelector('.box')
+            var box_width = box.offsetWidth;
+            var prev = document.querySelector(".prev")
+            var next = document.querySelector(".next")
+            prev.addEventListener("click", function () {
+                if (slideIndex == 0) {
+                    slideIndex = images.children.length - 1
+                    images.style.left = -slideIndex * box_width + 'px';
+                }
+                slideIndex--;
+                animate(images, -slideIndex * box_width)
+                circle--;
+                circle = circle < 0 ? dots.children.length - 1 : circle;
+                circleChange();
+            });
+            next.addEventListener("click", function () {
+                if (slideIndex == images.children.length - 1) {
+                    images.style.left = 0;
+                    slideIndex = 0;
+                }
+                slideIndex++;
+                animate(images, -slideIndex * box_width);
+                circle++;
+                if (circle == dots.children.length) {
+                    circle = 0;
+                }
+                circleChange();
+            });
+
+            var dots = document.querySelector('.dots');
+            for (var i = 0; i < images.children.length; i++) {
+                var li = document.createElement('li');
+                li.setAttribute('index', i);
+                dots.appendChild(li);
+                li.addEventListener('click', function () {
+                    for (var i = 0; i < dots.children.length; i++) {
+                        dots.children[i].className = ' ';
+                    }
+                    this.className = 'active';
+                    var index = this.getAttribute('index');
+                    slideIndex = index;
+                    circle = index;
+                    animate(images, -slideIndex * box_width);
+                })
+            }
+            dots.children[0].className = 'active';
+            var first = images.children[0].cloneNode(true);
+            images.appendChild(first);
+
+
+            function circleChange() {
+                for (var i = 0; i < dots.children.length; i++) {
+                    dots.children[i].className = '';
+                }
+                dots.children[circle].className = 'active';
+            }
+
+
+            var timer = setInterval(function () {
+                next.click();
+            }, 3000);
+
+
+            box.addEventListener('mouseenter', function () {
+                clearInterval(timer);
+                timer = null;
+            });
+
+            box.addEventListener('mouseleave', function () {
+                timer = setInterval(function () {
+
+                    next.click();
+                }, 3000);
+            });
+
+
+            function animate(obj, target, callback) {
+
+                clearInterval(obj.timer);
+                obj.timer = setInterval(function () {
+                    var step = (target - obj.offsetLeft) / 10;
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    if (obj.offsetLeft == target) {
+
+                        clearInterval(obj.timer)
+                        if (callback) {
+                            callback();
+                        }
+                    }
+                    obj.style.left = obj.offsetLeft + step + 'px';
+                }, 15);
+            }
+
+            next.click();
+        })
+    </script>
+    <script type="text/javascript">
+        function showInfo(objId) {
+            if (objId == "junior") {
+                document.getElementById("pri").className = "unselect";
+                document.getElementById("jun").className = "selected";
+                document.getElementById("primary").style.display = "none";
+                document.getElementById("junior").style.display = "block";
+            } else if (objId == "senior") {
+                document.getElementById("pri").className = "unselect";
+                document.getElementById("jun").className = "unselect";
+                document.getElementById("primary").style.display = "none";
+                document.getElementById("junior").style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        var imgc = 5;
+        var imgm = 8;
+        var flag = 1;
+        var tm;
+
+        var box1_1 = document.getElementById('box1-1');
+        var imgMask = document.getElementById('imgmask1');
+        var box1_1_1 = document.getElementById('box1-1-1');
+        var img1_1 = document.getElementById('img1_1');
+
+
+        function changeMask(cIndex) {
+            for (var i = 1; i <= 4; i++) {
+                var mask = document.getElementById('mask' + i);
+                mask.style.display = "none";
+            }
+            var index = cIndex - 4;
+            var mask = document.getElementById('mask' + index);
+            mask.style.display = "block";
+
+        }
+
+
+        function cgimg() {
+            if (flag === 0) return;
+            changeMask(imgc);
+            var img1 = document.getElementById('img1');
+            img1.src = "../image/" + imgc + ".jpg";
+
+
+            img1_1.src = "../image/" + imgc + ".jpg";
+
+            imgc++;
+            if (imgc > imgm) imgc = 5;
+            tm = window.setTimeout(cgimg, 2000);
+        }
+
+
+        function imgStop() {
+            flag = 0;
+            changeMask(imgc);
+            window.clearTimeout(tm);
+        }
+        function imgStop1() {
+            flag = 0;
+            var box1_1 = document.getElementById('box1-1');
+            box1_1.style.cursor = "pointer";
+            changeMask(imgc - 1);
+            window.clearTimeout(tm);
+        }
+
+
+        function imgStart() {
+            flag = 1;
+            tm = window.setTimeout(cgimg, 2000);
+            changeMask(imgc);
+        }
+
+        function imgStart2(obj) {
+            flag = 1;
+            tm = window.setTimeout(cgimg, 2000);
+            obj.style.border = "none";
+        }
+        function imgStart3(obj) {
+            flag = 1;
+            tm = window.setTimeout(cgimg, 2000);
+            obj.style.border = "none";
+        }
+
+
+        function moimg(imgurl, obj) {
+            window.clearTimeout(tm);
+            var img1 = document.getElementById('img1');
+            img1.src = imgurl;
+            for (var i = 1; i <= 4; i++) {
+                var mask = document.getElementById('mask' + i);
+                mask.style.display = "none";
+                var btn = document.getElementById('btn' + i);
+                btn.style.border = "none";
+            }
+            obj.style.border = "2px solid red";
+
+        }
+
+
+        cgimg();
+
+
+        box1_1.onmouseover = function () {
+            imgStop1();
+            imgMask.style.display = "block";
+            box1_1_1.style.display = "block";
+        }
+
+        box1_1.onmousemove = function big(event) {
+            var maskX = event.clientX - box1_1.offsetLeft - imgMask.offsetWidth;
+            var maskY = event.clientY - box1_1.offsetTop - imgMask.offsetHeight;
+            var maskMaxX = box1_1.offsetWidth - imgMask.offsetWidth;
+            var maskMaxY = box1_1.offsetHeight - imgMask.offsetHeight;
+            if (maskX < 0) {
+                maskX = 0;
+            } else if (maskX > maskMaxX) {
+                maskX = maskMaxX;
+            }
+            if (maskY < 0) {
+                maskY = 0;
+            } else if (maskY > maskMaxY) {
+                maskY = maskMaxY;
+            }
+            imgMask.style.left = maskX + "px";
+            imgMask.style.top = maskY + "px";
+            var bigImgMax = img1_1.offsetWidth - box1_1_1.offsetWidth;
+            var bigImgX = maskX * bigImgMax / maskMaxX;
+            var bigImgY = maskY * bigImgMax / maskMaxY;
+            img1_1.style.left = -bigImgX + "px";
+            img1_1.style.top = -bigImgY + "px";
+        }
+
+        box1_1.onmouseout = function () {
+            imgStart();
+            imgMask.style.display = "none";
+            box1_1_1.style.display = "none";
+        }
+    </script>
+
+</html>
+
+</html>
