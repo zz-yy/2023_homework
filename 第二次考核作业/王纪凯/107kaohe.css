@@ -1,0 +1,343 @@
+body{
+    border: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.one{
+    width: 100%;
+    height: 170px;
+    background-color: orange; 
+    position: relative;
+}
+.one img{
+    position: absolute;
+    height: 120px;
+    width: 600px;
+    left: 20%;
+    top: 20%;
+}
+.search{
+    position: absolute;
+    width: 265px;
+    height: 53px;
+    top: 40%;
+    right: 10%;
+    background-color: orange;
+}
+.search input{
+    width: 200px;
+    height: 45px;
+    border: 2px solid #01ACB7;
+    border-radius: 5px;
+}
+.search button{
+    height: 45px;
+    color: white;
+    background-color: #01ACB7;
+}
+.two{
+    width: 100%;
+    background-color: #01ACB7;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+}
+.two a{
+text-decoration: none;
+color: white;
+background-color: #01ACB7;
+height: 75px;
+line-height: 75px;
+margin-left: 20px;
+}
+.two a:hover{
+    background-color: orange;
+}
+.three{
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: wheat;
+    height: 485px;
+   overflow: hidden;
+}
+.three-inner{
+    display: flex;
+    height: 100%;
+    width: 400%;
+    left: 0;
+    position: relative;
+
+}
+.three .three-inner img{
+    width: 100%;
+    height: 100%;
+   flex-shrink: 0;
+    object-fit: cover;
+}
+.three .prev img{
+width: 50px;
+height: 50px;
+position: absolute;
+top: 50%;
+left: 20px;
+margin: auto 0;
+
+}
+.three .prev img:hover  .three .next img:hover{
+    background-color: red;
+}
+.three .next img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin: auto 0;
+    
+    }
+    .bold
+    {
+      width: 100%;
+      height: 20px;
+      background-color: white;
+    }
+    .pome1 {
+      justify-content: space-around; 
+      width: 600px;
+      height: 50px;
+      background-color: white;
+      align-items: center; 
+      border-radius: 10px;
+      display: flex;
+  }
+  .pome{
+    width: 600px;
+    height: 366px;
+    position: absolute;
+    left: 10%;
+    top: 730px;
+  }
+  .shui, .manjiang {
+     
+      justify-content: center; 
+      align-items: center; 
+      width: calc(50% - 10px);
+      height: 50px;
+      background-color: orange;
+      color: white;
+      line-height: 50px;
+      font-size: larger;
+      text-align: center; 
+      border-radius: 5px;
+  }
+  .shui:hover , .manjiang:hover{
+    background-color: red;
+  }
+  .pome2 {
+    
+   
+    width: 600px;
+    height: 316px;
+    background-color: white;
+    position: absolute;
+    border: 1px solid black;
+  }
+  .pome3{
+
+    width: 600px;
+    height: 316px;
+    background-color: white;
+    position: absolute;
+    border: 1px solid black;
+  }
+  .box
+  {
+    position: relative;
+    width: 477px;
+left: 50%;
+  }
+  .huiyi{
+width: 100%;
+height: 266px;
+background-color:white;
+ overflow: hidden;
+border: 3px solid orange;
+border-top-left-radius: 10px;
+border-top-right-radius:10px ;
+
+  }
+.huiyi-inner{
+    display: flex;
+    height: 100%;
+    width: 400%;
+    left: 0;
+   
+    position: relative; 
+    
+}
+.huiyi .huiyi-inner img{
+  
+   flex-shrink: 0;
+    object-fit: cover;
+}
+.p{
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: 477px;
+  height: 76px;
+  margin-top: 10px; 
+  justify-content: space-between;
+}
+.p div{
+  display: flex;
+  width: 110px;
+  height: 76px;
+  margin-left: 2px;
+  border: 3px solid grey;
+  box-sizing: border-box;
+
+} 
+.p img:hover{
+  border: 3px solid red;
+}
+.pom{
+  width: 280px;
+  height: 450px;
+  position: absolute;
+  right: 0;
+  top: 728px;
+  background-color: white;
+}
+.chunxiao{
+  width: 100%;
+  height: 50px;
+  background-color: red;
+  text-align: center;
+  font-size: larger;
+}
+.chunxiaoju{
+  background-color: white;
+  width: 100%;
+  height: 200px;
+}
+.chunxiaoju li{
+  text-align: center;
+ list-style: none;
+ font-size: larger;
+ margin-top: 4px;
+}
+.yeyu , .qingming{
+  width: 100%;
+  height: 50px;
+  background-color: orange;
+  text-align: center;
+  font-size: larger;
+
+}
+
+
+
+
+ .picture{
+  position: absolute;
+overflow: hidden;
+  top: 1100px;
+  left: 10%;
+  width: 1002px;
+  height: 179px;
+  background-color: white;
+  border: 3px solid orange;
+  border-radius: 2px;
+ }
+ .picture-inner{
+  transition: transform 0.5s ease;
+  width: 1500px;
+  height: 179px;
+  display: flex;
+  transform: translateX(0);
+ }
+ .picture img{
+  margin-left: 10px;
+  width: 227px;
+  height: 176px;
+  
+ }
+ .button-inner{
+  position: relative;
+ }
+.prev2{
+  width: 25px;
+height: 25px;
+position: absolute;
+top: 50%;
+left: 0px;
+margin: auto 0;
+}
+.next2{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  margin: auto 0;
+}
+.animal{
+  position: absolute;
+  right: 0%;
+  top:1100px;
+  display: flex; 
+  flex-wrap: wrap; 
+  width: 360px; 
+  height: 172px; 
+border: 3px solid orange;
+  
+}
+.animal img{
+  width: calc(50% - 4px);
+  height: calc(50% - 4px);
+  margin: 2px;
+  object-fit: cover; 
+}
+
+
+ .clear-float {
+  clear: both;
+}
+ .over{
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 1350px;
+  display: flex;
+  background-color: orange;
+ }
+ .img-inner{
+  position: relative;
+  width: 100%;
+  height: 200px;
+ }
+ .over img{
+  position: absolute;
+    height: 150px;
+    width: 477px;
+    left: 20%;
+    top: 20%;
+ }
+.wenzi{
+height: 100%;
+width: 600px;
+position: relative;
+}
+.wenzi-inner{
+  position: absolute;
+ 
+}
+.wenzi-inner div{
+   text-align: center;
+  color: black;
+  font-size: larger;
+  margin-top: 20px;
+}

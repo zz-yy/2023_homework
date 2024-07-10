@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document?</title>
+    <link rel="stylesheet" href="107kaohe.css" type="text/css">
+</head>
+<body>
+    <div class="one">
+        <img src="./images/logo.png" alt="">
+        <div class="search">
+            <input type="text" value="站内搜索">
+            <button type="button">搜索</button>
+        </div>
+    </div>
+    <div class="two">
+        <a href="#">首页</a>
+        <a href="#">中心简介</a>
+        <a href="#">中心动态</a>
+        <a href="#">教师培训</a>
+        <a href="#">教学研究</a>
+        <a href="#">资源中心</a>
+        <a href="#">咨询服务</a>
+    </div>
+    <div class="three">
+        <div class="three-inner">
+            <img src="images/banner1.jpg" alt="">
+            <img src="images/banner2.jpg" alt="">
+            <img src="images/banner3.jpg" alt="">
+            <img src="images/banner4.jpg" alt="">
+        </div>
+        <div>
+            <div class="prev" onclick="prev()"><a href="#"><img src="./images/prev.png" alt=""></a></div>
+            <div class="next" onclick="next()"><a href="#"><img src="./images/next.png" alt=""></a></div>
+        </div>
+        <script>
+            let index = 0
+            // 获取图片数目flag
+            let imageCount = document.querySelectorAll(
+                ".three .three-inner img"
+            ).length
+            function refresh() {
+                if (index < 0) {
+                    index = 3
+                } else if (index > 3) {
+                    index = 0
+                }
+                let three = document.querySelector('.three')
+                let width = getComputedStyle(three).width
+                width = Number(width.slice(0, -2))
+                console.log(width)
+                three.querySelector(".three-inner").style.left =
+                    index * width * -1 + "px"
+            }
+            function createAuto() {
+                return setInterval(() => {
+                    index++
+                    refresh()
+                }, 3000)
+            }
+            // 自动滚动
+            let autoTimer = createAuto()
+            let refreshWrapper = (func) => {
+                return function (...args) {
+                    let result = func(...args)
+                    refresh()
+                    clearInterval(autoTimer)
+                    autoTimer = createAuto()
+                    return result
+                }
+            }
+            let prev = refreshWrapper(() => {
+                index--
+            })
+            let next = refreshWrapper(() => {
+                index++
+            })
+    
+            refresh()
+        </script>
+    </div>
+    </div>
+    <div class="pome">
+    <div class="pome1">
+        <div class="shui" onclick="togglepome2()">水调歌头</div>
+        <button class="manjiang" onclick="togglepome3()">满江红写怀</button>
+    </div>
+    <div class="pome2">    
+            <div>明月几时有，把酒问青天</div>
+            <div>不知天上宫阙，今夕是何年</div>
+            <div>我欲乘风归去，又恐琼楼玉宇，高处不胜寒</div>
+            <div>起舞弄清影，何似在人间</div>
+            <div>转朱阁，低绮户，照无眠</div>
+            <div>不应有恨，何事长向别时圆？人有悲欢离合，月有阴晴圆缺，此事古难全</div>
+            <div>但愿人长久，千里共婵娟</div>
+    </div>
+    <div class="pome3">
+        <div>怒发冲冠，凭栏处、潇潇雨歇。抬望眼，仰天长啸，壮怀激烈</div>
+        <div>三十功名尘与土，八千里路云和月</div>
+        <div>莫等闲，白了少年头，空悲切</div>
+        <div>靖康耻，犹未雪。臣子恨，何时灭</div>
+        <div>驾长车，踏破贺兰山缺</div>
+        <div>壮志饥餐胡虏肉，笑谈渴饮匈奴血</div>
+        <div>待从头、收拾旧山河，朝天阙</div>
+    </div>
+    <script>
+        let shui = document.querySelector('.shui')
+        let pome2 = document.querySelector('.pome2')
+        let manjinag = document.querySelector('.manjiang')
+        let pome3 = document.querySelector('.pome3')
+        function togglePome2() {
+        if (pome2.style.display === 'none') {
+            pome2.style.display = 'block'
+            pome3.style.display = 'none'
+        } else {
+            pome2.style.display = 'none'
+            pome3.style.display = 'block'
+        }
+    }
+        function togglePome3() {
+        if (pome3.style.display === 'none') {
+            pome3.style.display = 'block'
+            pome2.style.display = 'none' 
+        } else {
+            pome3.style.display = 'none'
+            pome2.style.display = 'block'
+        }
+    }
+    shui.addEventListener('click', togglePome2)
+    manjiang.addEventListener('click', togglePome3)
+    </script>
+    </div>
+    <div class="box">
+   <div class="huiyi">
+        <div class="huiyi-inner">
+           <img src="./images/img1.jpg" alt="1">
+            <img src="./images/img2.jpg" alt="2">
+            <img src="./images/img3.jpg" alt="3">
+            <img src="./images/img4.jpg" alt="4">
+        </div>
+        <script>
+       
+            let inde=0
+            let imgcount = document.querySelectorAll(".huiyi-inner img").length
+            function refres(){
+                if( inde < 0)
+                {
+                    inde = 3
+                }
+                else if( inde > 3)
+            {
+                inde = 0;
+            }
+                let huiyi = document.querySelector('.huiyi')
+                let widt=getComputedStyle(huiyi).width
+                widt = Number(widt.slice(0,-2))
+                console.log(widt)
+                huiyi.querySelector(".huiyi-inner").style.left = 
+                inde * widt * -1+ "px"
+            }
+            function createaut(){
+                return setInterval(()=>{
+                    inde++
+                    refres()
+                },3000)
+            }
+           
+            let autotime = createaut()
+            let refreshWrappe = (func)=>{
+                return function(...args){
+                    let resul = func(...args)
+                    refres()
+                clearInterval(autotime)
+                autotime = createaut()
+                return resul 
+                }
+               
+            }
+           </script> 
+    </div>
+    <div class="p">
+    <div class="p1"><img src="./images/img1.jpg" alt=""></div>
+    <div class="p2"><img src="./images/img2.jpg" alt=""></div>
+    <div class="p3"><img src="./images/img3.jpg" alt=""></div>
+    <div class="p4"><img src="./images/img4.jpg" alt=""></div>
+    </div>
+    <script>
+        let p = document.querySelector('.p')
+        let p1 = document.querySelector('.p1')
+        let p2 = document.querySelector('.p2')
+        let p3 = document.querySelector('.p3')
+        let p4 = document.querySelector('.p4')
+        p1.addEventListener('click',function(){
+inde = 0
+refres()
+        })
+        p2.addEventListener('click',function(){
+inde = 1
+refres()
+        })
+        p3.addEventListener('click',function(){
+inde = 2
+refres()
+        })
+        p4.addEventListener('click',function(){
+inde = 3
+refres()
+        })
+    </script>
+    </div>
+    <div class="pom">
+<div class="chunxiao">春晓</div>
+<div class="chunxiaoju">
+    <ul>
+        <li>春眠不觉晓</li>
+        <li>处处闻啼鸟</li>
+        <li>夜来风雨声</li>
+        <li>花落知多少</li>
+    </ul>
+</div>
+<div class="yeyu">夜雨寄北</div>
+<div class="qingming">清明</div>
+    </div>
+    
+   <div class="picture">
+    <div class="picture-inner">
+    <img src="./images/1.jpg" alt="">
+    <img src="./images/2.jpg" alt="">
+    <img src="./images/3.jpg" alt="">
+    <img src="./images/4.jpg" alt="">
+    <img src="./images/5.jpg" alt="">
+    <img src="./images/6.jpg" alt="">
+    </div>
+    <div class="button-inner">
+     <div class="prev2" onclick="prev2()"><a href="javascript:;"><img src="./images/prev.png" alt=""></a></div>
+    <div class="next2" onclick="next2()"><a href="javascript:;"><img src="./images/next.png" alt=""></a></div>
+</div>
+<script>
+            let ind=0
+            function refre(){
+                if( ind > 3)
+            {
+                ind = 0;
+            }
+                let picture = document.querySelector('.picture-inner')
+                picture.querySelector(".huiyi-inner").style.transform = 
+                'translateX(' + (-ind * 237) + 'px)'
+            }
+            refre()
+             setInterval(()=>{
+                ind++
+                if(ind>3)
+                {
+                    ind = 0
+                }
+                refre()
+            },3000)
+</script>
+  </div>
+<div class="animal">
+<img src="./images/dog 1.jpg" alt="">
+<img src="./images/dog 2.jpg" alt="">
+<img src="./images/dog 3.jpg" alt="">
+<img src="./images/dog 4.jpg" alt="">
+</div>
+<div class="clear-float"></div>
+ <div class="over">
+    <div class="img-inner"><img src="./images/up.png" alt=""></div>
+    <div class="wenzi">
+        <div class="wenzi-inner">
+        <div>联系电话：13766666666</div>
+        <div>地址：河南省河南大学金明校区</div>
+        <div>技术支持：107实验室</div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
