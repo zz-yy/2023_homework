@@ -1,0 +1,22 @@
+
+.part2 {
+    width: 100%;
+    height: 60px;
+    background-color: #084466;
+}
+.part2 table{
+    position: relative;
+    left: 15%;
+    width: 70%;
+    height: 60px;
+}
+
+.part2 td{
+     color: #f3f1f1;
+     text-align: center;
+     vertical-align: center;
+     cursor: pointer;
+}
+.part2 td:hover{
+    background-color: #EC6B0E;
+}
